@@ -20,52 +20,83 @@
     </nav>
 
     <div class="cover zone">
-      <h1>Online AI powered Art Gallery</h1>
+      <h1>Cart</h1>
       <!-- <img class="cover" src="img/Main Banner Background.jpg" /> -->
     </div>
 
-    <section class="trending zone one">
-      <div class="section_container">
-        <header>Trending Artpieces</header>
+    <section class="Cart zone one">
+      <div class="Cart-wrapper">
+        <header>Cart</header>
         <div class="section_body">
-          <div class="Carousel"></div>
+          <table>
+            <thead>
+              <tr>
+                <td>Remove</td>
+                <td>Product</td>
+                <td>Description</td>
+                <td>Price</td>
+                <td>Quantity</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="item1">
+                <td class="Remove">RRR</td>
+                <td class="Image">III</td>
+                <td class="Price">PPP</td>
+                <td class="Quantity">QQQ</td>
+              </tr>
+              <tr class="item2">
+                <td class="Remove">RRR</td>
+                <td class="Image">III</td>
+                <td class="Price">PPP</td>
+                <td class="Quantity">QQQ</td>
+              </tr>
+              <tr class="item3">
+                <td class="Remove">RRR</td>
+                <td class="Image">III</td>
+                <td class="Price">PPP</td>
+                <td class="Quantity">QQQ</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
 
-    <section class="style zone one">
-      <div class="section_container">
-        <header>Choose from different styles</header>
-        <div class="section_body">
-          <div class="Carousel"></div>
+    <section class="Transaction">
+      <div class="coupon">
+        <h3>APPLY COUPON</h3>
+        <div>
+          <input type="text" placeholder="Enter Your Coupon">
+          <button class="apply">Apply</button>
         </div>
       </div>
-    </section>
 
-    <section class="collections zone one">
-      <div class="section_container">
-        <header>Check out some collections</header>
-        <div class="section_body">
-          <div class="Carousel"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="gallery zone one">
-      <div class="section_container">
-        <header>Visit Our Gallery</header>
-        <div class="section_body">
-          <div class="Carousel"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="about zone one">
-      <div class="section_container">
-        <header>About</header>
-        <div class="section_body">
-          <div class="Carousel"></div>
-        </div>
+      <div class="checkout">
+        <h3>Cart Total</h3>
+        <table>
+          <tr class="total">
+            <td>Cart Total</td>
+            <td>$XXX</td>
+          </tr>
+          <tr class="shipping">
+            <td>Shipping</td>
+            <td>$XXX</td>
+          </tr>
+          <tr class="tax">
+            <td>Tax</td>
+            <td>$XXX</td>
+          </tr>
+          <tr class="discount">
+            <td>Coupon Discounts</td>
+            <td>$XXX</td>
+          </tr>
+          <tr class="final">
+            <td>Final Total</td>
+            <tr>$XXX</tr>
+          </tr>
+        </table>
+        <button class="purchase">Purchase</button>
       </div>
     </section>
 

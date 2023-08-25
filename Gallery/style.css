@@ -92,28 +92,36 @@ footer {
 }
 
 .footer {
-    margin-top: 150px;
+    box-sizing: border-box;
     width: 100%;
-    padding: 100px 15%;
+    /* padding: 100px 15%; */
     display: flex;
+    justify-content: center;
+    /* height: 20vh; */
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 5.6rem;
 }
 
 .footer div {
     text-align: center;
 }
 
-.col-2 {
-    flex-grow: 2;
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+.footer-column-social{
+    text-align: center;
 }
 
 .footer div h3 {
     font-weight: 300;
     margin-bottom: 1px;
-}
-
-.col-1 a {
-    display: block;
-    text-decoration: none;
 }
 
 .socials {
@@ -129,10 +137,34 @@ footer {
 /* Newsletter */
 .newsletter {
     margin: auto;
+    display: flex;
+    justify-content: center;
+    padding: 4.8rem;
+    background-color: #352126;
+}
+
+.newsletter-banner-wrapper {
+ display: flex;
 }
 
 .newsletter h3 {
     margin: auto;
+}
+
+.letter-header {
+    padding: 1.6rem;
+    display: flex;
+
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 0.8rem;
+    padding: 1.6rem;
+}
+
+.newsletter-input {
+    align-items: center;
 }
 
 form input {
