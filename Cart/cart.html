@@ -3,7 +3,7 @@
   <head>
     <title>Layout Master</title>
     <link rel="stylesheet" type="text/css" href="./style.css" />
-    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/269b861063.js"
       crossorigin="anonymous"
@@ -12,10 +12,10 @@
   <body>
     <nav class="zone zero sticky">
       <ul class="main-nav">
-        <li><a href="">About</a></li>
-        <li><a href="">Products</a></li>
-        <li><a href="">Our Team</a></li>
-        <li class="push"><a href="">Contacts</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../Listings/listings.html">Gallery</a></li>
+        <li><a href="../Listings/listings.html">Liked</a></li>
+        <li class="push"><a href="./Cart/cart.html">Cart</a></li>
       </ul>
     </nav>
 
@@ -24,10 +24,9 @@
       <!-- <img class="cover" src="img/Main Banner Background.jpg" /> -->
     </div>
 
-    <section class="Cart zone one">
-      <div class="Cart-wrapper">
-        <header>Cart</header>
-        <div class="section_body">
+    <section class="cart">
+      <div class="cart-wrapper">
+        <div class="cart-body">
           <table>
             <thead>
               <tr>
@@ -38,24 +37,24 @@
                 <td>Quantity</td>
               </tr>
             </thead>
-            <tbody>
+            <tbody class="inventory">
               <tr class="item1">
-                <td class="Remove">RRR</td>
-                <td class="Image">III</td>
-                <td class="Price">PPP</td>
-                <td class="Quantity">QQQ</td>
+                <td class="remove">RRR</td>
+                <td class="image">III</td>
+                <td class="price">PPP</td>
+                <td class="quantity">QQQ</td>
               </tr>
               <tr class="item2">
-                <td class="Remove">RRR</td>
-                <td class="Image">III</td>
-                <td class="Price">PPP</td>
-                <td class="Quantity">QQQ</td>
+                <td class="remove">RRR</td>
+                <td class="image">III</td>
+                <td class="price">PPP</td>
+                <td class="quantity">QQQ</td>
               </tr>
               <tr class="item3">
-                <td class="Remove">RRR</td>
-                <td class="Image">III</td>
-                <td class="Price">PPP</td>
-                <td class="Quantity">QQQ</td>
+                <td class="remove">RRR</td>
+                <td class="image">III</td>
+                <td class="price">PPP</td>
+                <td class="quantity">QQQ</td>
               </tr>
             </tbody>
           </table>
@@ -63,11 +62,11 @@
       </div>
     </section>
 
-    <section class="Transaction">
+    <section class="transaction">
       <div class="coupon">
         <h3>APPLY COUPON</h3>
         <div>
-          <input type="text" placeholder="Enter Your Coupon">
+          <input type="text" placeholder="Enter Your Coupon" />
           <button class="apply">Apply</button>
         </div>
       </div>
@@ -77,47 +76,28 @@
         <table>
           <tr class="total">
             <td>Cart Total</td>
-            <td>$XXX</td>
+            <td id="total">$XXX</td>
           </tr>
           <tr class="shipping">
             <td>Shipping</td>
-            <td>$XXX</td>
+            <td id="shipping">$XXX</td>
           </tr>
           <tr class="tax">
             <td>Tax</td>
-            <td>$XXX</td>
+            <td id="tax">$XXX</td>
           </tr>
           <tr class="discount">
             <td>Coupon Discounts</td>
-            <td>$XXX</td>
+            <td id="discount">$XXX</td>
           </tr>
           <tr class="final">
             <td>Final Total</td>
-            <tr>$XXX</tr>
+            <td id="final">$XXX</td>
           </tr>
         </table>
         <button class="purchase">Purchase</button>
       </div>
     </section>
-
-    <div class="zone two grid-wrapper">
-      <div class="box zone"><img src="img/files_2.png" alt="" /></div>
-      <div class="box zone">
-        <img src="img/data_storage_2_2.png" alt="" />
-      </div>
-      <div class="box zone">
-        <img src="img/desktop_analytics_2.png" alt="" />
-      </div>
-      <div class="box zone"><img src="img/server_2_2.png" alt="" /></div>
-      <div class="box zone">
-        <img src="img/monitor_coding_2.png" alt="" />
-      </div>
-      <div class="box zone"><img src="img/server_safe_2.png" alt="" /></div>
-      <div class="box zone"><img src="img/server_3.png" alt="" /></div>
-      <div class="box zone">
-        <img src="img/monitor_settings_2.png" alt="" />
-      </div>
-    </div>
 
     <footer class="zone three">
       <div class="newsletter">
@@ -171,6 +151,6 @@
         </div>
       </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
   </body>
 </html>

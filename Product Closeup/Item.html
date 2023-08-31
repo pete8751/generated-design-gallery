@@ -3,7 +3,7 @@
   <head>
     <title>Layout Master</title>
     <link rel="stylesheet" type="text/css" href="./style.css" />
-    <link rel="stylesheet" href="style2.css" />
+    <!-- <link rel="stylesheet" href="style2.css" /> -->
     <script
       src="https://kit.fontawesome.com/269b861063.js"
       crossorigin="anonymous"
@@ -12,36 +12,39 @@
   <body>
     <nav class="zone zero sticky">
       <ul class="main-nav">
-        <li><a href="">About</a></li>
-        <li><a href="">Products</a></li>
-        <li><a href="">Our Team</a></li>
-        <li class="push"><a href="">Contacts</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../Listings/listings.html">Gallery</a></li>
+        <li><a href="../Listings/listings.html">Liked</a></li>
+        <li class="push"><a href="../Cart/cart.html">Cart</a></li>
       </ul>
     </nav>
 
     <section class="product-container zone one">
       <div class="product">
-        <div>
-          <img src="/img/data_storage_2_2.png" alt="Image" />
+        <div class="images">
+          <div class="big-image">
+            <img id="big" src="../img/Gallery/Metropolis 1.jpg" alt="Image" />
+          </div>
           <div class="bundle">
             <div class="small bundle1">
-              <img src="/img/desktop_analytics_2.png" alt="" />
+              <img id="1" src="../img/Gallery/Metropolis 2.jpg" alt="" />
             </div>
             <div class="small bundle2">
-              <img src="/img/desktop_analytics_2.png" alt="" />
+              <img id="2" src="../img/Gallery/Metropolis 3.jpg" alt="" />
             </div>
             <div class="small bundle3">
-              <img src="/img/desktop_analytics_2.png" alt="" />
+              <img id="3" src="../img/Gallery/Metropolis 4.jpg" alt="" />
             </div>
           </div>
         </div>
 
         <div class="description">
-          <h6 class="url"></h6>
+          <h6 class="url">Home / Art</h6>
           <h3 class="product-name">PRODUCT NAME</h3>
           <h2 class="product-price">PRICE</h2>
-          <input type="number" value="1" />
-          <button class="submit">Add to Cart</button>
+          <input class="quantity" type="number" value="1" />
+          <button class="buy-btn">Add item to Cart</button>
+          <button class="bundle-btn">Add bundle to Cart</button>
           <h4>Product Description</h4>
           <span
             >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore
@@ -56,21 +59,29 @@
     </section>
 
     <div class="zone two grid-wrapper">
-      <div class="box zone"><img src="img/files_2.png" alt="" /></div>
       <div class="box zone">
-        <img src="img/data_storage_2_2.png" alt="" />
+        <img src="../img/Gallery/Desert Scenic.jpg" alt="" />
       </div>
       <div class="box zone">
-        <img src="img/desktop_analytics_2.png" alt="" />
+        <img src="../img/Gallery/Modern Pattern 1.jpg" alt="" />
       </div>
-      <div class="box zone"><img src="img/server_2_2.png" alt="" /></div>
       <div class="box zone">
-        <img src="img/monitor_coding_2.png" alt="" />
+        <img src="../img/Gallery/Modern Pattern 2.jpg" alt="" />
       </div>
-      <div class="box zone"><img src="img/server_safe_2.png" alt="" /></div>
-      <div class="box zone"><img src="img/server_3.png" alt="" /></div>
       <div class="box zone">
-        <img src="img/monitor_settings_2.png" alt="" />
+        <img src="../img/Gallery/Oasis Scenic.jpg" alt="" />
+      </div>
+      <div class="box zone">
+        <img src="../img/Gallery/Woman Impressionism.jpg" alt="" />
+      </div>
+      <div class="box zone">
+        <img src="../img/Gallery/Modern Scenic.jpg" alt="" />
+      </div>
+      <div class="box zone">
+        <img src="../img/Gallery/Van Gogh 4.jpg" alt="" />
+      </div>
+      <div class="box zone">
+        <img src="../img/Gallery/Dark Modern 3.jpg" alt="" />
       </div>
     </div>
 
@@ -126,6 +137,6 @@
         </div>
       </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
   </body>
 </html>

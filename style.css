@@ -151,6 +151,7 @@ a {
     padding: 130px;
     margin: 20px;
     cursor: pointer;
+    border: 10px outset;
 }
 
 /* footer */

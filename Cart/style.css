@@ -95,50 +95,72 @@ a {
     background-size: cover;
 }
 
-
-/* Modules */
-
-.section_container {
-    padding: 15px;
-    margin-left: auto;
-    margin-right: auto;
+/* table {
+    width: 100%;
+} */
+.cart-wrapper {
+    margin: auto 5%;
 }
 
-/* Trending Module */
-.trending {
+.cart-body table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+
+.cart-body table thead{
+    border: 1px solid black;
+    border-left: none;
+    border-right: none;
+}
+
+.cart-body table thead td{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 18px, 0;
+}
+
+.cart-body table tbody tr td{
+    padding-top: 15px;
+}
+
+.cart-body table tbody td{
+    font-size: 13px;
+}
+
+.cart-body table img{
+    width: 70px
+}
+
+.cart-body table td:nth-child(1){
+    width: 100px;
+    text-align: center;
+}
+
+.cart-body table td:nth-child(2){
+    width: 150px;
+    text-align: center;
+}
+
+.cart-body table td:nth-child(3){
+    width: 250px;
+    text-align: center;
+}
+
+.cart-body table td:nth-child(4), .cart-body table td:nth-child(5), .cart-body table td:nth-child(6){
+    width: 150px;
+    text-align: center;
+}
+
+/* Transaction */
+
+.transaction{
     display: flex;
-    height: 20vh;
-}
-
-/* Style Module */
-.style {
-    display: flex;
-    height: 20vh;
-}
-
-/* Collections Module */
-.collections {
-    display: flex;
-    height: 20vh;
-}
-
-/* Gallery Module */
-.gallery {
-    display: flex;
-    height: 20vh;
-}
-
-/* About Module */
-.about {
-    display: flex;
-    height: 20vh;
-}
-
-/*GRID*/
-.grid-wrapper {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    justify-content: center;
+    gap: 10%;
+    padding: 10% 0 5%;
 }
 
 /*Images*/

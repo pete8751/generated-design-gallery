@@ -3,7 +3,6 @@
   <head>
     <title>Gallery</title>
     <link rel="stylesheet" type="text/css" href="./style.css" />
-    <link rel="stylesheet" href="style2.css" />
     <script
       src="https://kit.fontawesome.com/269b861063.js"
       crossorigin="anonymous"
@@ -12,41 +11,204 @@
   <body>
     <nav class="zone zero sticky">
       <ul class="main-nav">
-        <li><a href="">About</a></li>
-        <li><a href="">Products</a></li>
-        <li><a href="">Our Team</a></li>
-        <li class="push"><a href="">Contacts</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./listings.html">Gallery</a></li>
+        <li><a href="./listings.html">Liked</a></li>
+        <li class="push"><a href="../Cart/cart.html">Cart</a></li>
       </ul>
     </nav>
 
     <div class="wrapper">
       <section class="panel">
         <div class="filter-panel">
-          This is the side panel content.
-          <div class="price-filter"></div>
-          <div class="genre-filter"></div>
+          <div class="price-filter">
+            <h3>Price</h3>
+            <div class="inputs">
+              <div class="field">
+                <span>Min</span>
+                <input type="number" class="price input input-min" value="0" />
+              </div>
+              <div class="range-input">
+                <input
+                  type="range"
+                  class="price range range-min"
+                  min="0"
+                  value="0"
+                />
+              </div>
+              <div class="separator">-</div>
+              <div class="field">
+                <span>Max</span>
+                <input
+                  type="number"
+                  class="price input input-max"
+                  value="100000"
+                />
+              </div>
+              <div class="range-input">
+                <input
+                  type="range"
+                  class="price range range-max"
+                  max="100000"
+                  value="100000"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="height-filter">
+            <h3>Height</h3>
+            <div class="inputs">
+              <div class="field">
+                <span>Min</span>
+                <input type="number" class="height input input-min" value="0" />
+              </div>
+              <div class="range-input">
+                <input
+                  type="range"
+                  class="height range range-min"
+                  min="0"
+                  value="0"
+                />
+              </div>
+              <div class="separator">-</div>
+              <div class="field">
+                <span>Max</span>
+                <input
+                  type="number"
+                  class="height input input-max"
+                  value="100"
+                />
+              </div>
+              <div class="range-input">
+                <input
+                  type="range"
+                  class="height range range-max"
+                  max="100"
+                  value="100"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="width-filter">
+            <h3>Width</h3>
+            <div class="inputs">
+              <div class="field">
+                <span>Min</span>
+                <input type="number" class="width input input-min" value="0" />
+              </div>
+              <div class="range-input">
+                <input
+                  type="range"
+                  class="width range range-min"
+                  min="0"
+                  value="0"
+                />
+              </div>
+              <div class="separator">-</div>
+              <div class="field">
+                <span>Max</span>
+                <input
+                  type="number"
+                  class="width input input-max"
+                  value="100"
+                />
+              </div>
+              <div class="range-input">
+                <input
+                  type="range"
+                  class="width range range-max"
+                  max="100"
+                  value="1000"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="stylefilter">
+            <h3>Styles</h3>
+            <div class="style-options">
+              <div class="modern-container">
+                <input type="radio" id="modern" value="%modern%" />
+                <label for="modern"> Modern </label>
+              </div>
+              <div class="impressionism-container">
+                <input
+                  type="radio"
+                  id="impressionism"
+                  value="%impressionism%"
+                />
+                <label for="impressionism"> Impressionism </label>
+              </div>
+              <div class="scenic-container">
+                <input type="radio" id="scenic" value="%scenic%" />
+                <label for="scenic"> Scenic </label>
+              </div>
+              <div class="abstract-container">
+                <input type="radio" id="abstract" value="%abstract%" />
+                <label for="abstract"> Abstract </label>
+              </div>
+            </div>
+          </div>
+          <div class="bundle">
+            <h3>Bundles</h3>
+            <input type="radio" id="bundles" />
+            <!-- <label for="bundles"> Bundles </label> -->
+          </div>
         </div>
       </section>
 
       <div class="container">
         <section class="main">
-          <section class="filters">
-            <div class="filter-panel-container">
+          <section class="filter-options-container">
+            <div class="filter-options">
               <div class="filter-toggle">
                 <button type="button" class="filter-panel-toggle">
                   <i class="fa-solid fa-arrow-right open-icon"></i>
                   <i class="fa-solid fa-arrow-left close-icon"></i>
                 </button>
               </div>
-              <div class="filter-labels"></div>
+              <div class="reset-container">
+                <button id="reset">Remove Filters</button>
+              </div>
+              <div class="sortby">
+                <select name="images" id="sorting" class="sortby">
+                  <option value="none">Sort By:</option>
+                  <option value="highestprice">Highest Price</option>
+                  <option value="lowestprice">Lowest Price</option>
+                </select>
+              </div>
+              <div class="search-container">
+                <input
+                  id="search"
+                  type="text"
+                  required
+                  placeholder="Search for Art by Title"
+                />
+              </div>
             </div>
           </section>
 
           <section class="items">
             <div class="zone two grid-wrapper">
-              <div class="box zone"><img src="img/files_2.png" alt="" /></div>
               <div class="box zone">
-                <img src="img/data_storage_2_2.png" alt="" />
+                <img src="../img/Gallery/Abstract 1.jpg" alt="" />
+                <div class="caption">
+                  <div class="details">
+                    <p class="title">Title</p>
+                    <p class="size">Size</p>
+                    <p class="price">Price</p>
+                  </div>
+                  <div class="interact">
+                    <button class="like-btn">
+                      <i class="fa-regular fa-heart cap"></i>
+                    </button>
+                    <i class="fa-solid fa-cart-shopping cap"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="box zone">
+                <a class="image-container" href="../Product Closeup/Item.html">
+                  <img src="../img/Gallery/Abstract 1.jpg" alt="" />
+                </a>
               </div>
               <div class="box zone">
                 <img src="img/desktop_analytics_2.png" alt="" />
@@ -128,6 +290,6 @@
         </footer>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
   </body>
 </html>
