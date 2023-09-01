@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gallery</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/269b861063.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="zone zero sticky">
+      <ul class="main-nav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./listings.html">Search</a></li>
+        <li><a href="./Likes.html">Liked</a></li>
+        <li class="push"><a href="../Cart/cart.html">Cart</a></li>
+      </ul>
+    </nav>
+
+    <div class="wrapper">
+      <section class="panel">
+        <div class="filter-panel">
+          <div class="price-filter">
+            <h3 class="filter-label">Price</h3>
+            <div class="inputs">
+              <div class="field">
+                <span>Min</span>
+                <input type="number" class="price input input-min" value="0" />
+              </div>
+              <div class="range-input">
+                <input
+                  type="range"
+                  class="price range range-min"
+                  min="0"
+                  value="0"
+                />
+              </div>
+              <div class="separator">-</div>
+              <div class="field">
+                <span>Max</span>
+                <input
+                  type="number"
+                  class="price input input-max"
+                  value="100000"
+                />
+              </div>
+              <div class="range-input">
+                <input
+                  type="range"
+                  class="price range range-max"
+                  max="100000"
+                  value="100000"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="height-filter">
+            <h3 class="filter-label">Height</h3>
+            <div class="inputs">
+              <div class="field">
+                <span>Min</span>
+                <input type="number" class="height input input-min" value="0" />
+              </div>
+              <div class="range-input">
+                <input
+                  type="range"
+                  class="height range range-min"
+                  min="0"
+                  value="0"
+                />
+              </div>
+              <div class="separator">-</div>
+              <div class="field">
+                <span>Max</span>
+                <input
+                  type="number"
+                  class="height input input-max"
+                  value="100"
+                />
+              </div>
+              <div class="range-input">
+                <input
+                  type="range"
+                  class="height range range-max"
+                  max="100"
+                  value="100"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="width-filter">
+            <h3 class="filter-label">Width</h3>
+            <div class="inputs">
+              <div class="field">
+                <span>Min</span>
+                <input type="number" class="width input input-min" value="0" />
+              </div>
+              <div class="range-input">
+                <input
+                  type="range"
+                  class="width range range-min"
+                  min="0"
+                  value="0"
+                />
+              </div>
+              <div class="separator">-</div>
+              <div class="field">
+                <span>Max</span>
+                <input
+                  type="number"
+                  class="width input input-max"
+                  value="100"
+                />
+              </div>
+              <div class="range-input">
+                <input
+                  type="range"
+                  class="width range range-max"
+                  max="100"
+                  value="1000"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="style-filter">
+            <h3 class="filter-label">Styles</h3>
+            <div class="style-options">
+              <div class="modern-container">
+                <input type="radio" id="modern" value="%modern%" />
+                <label for="modern"> Modern </label>
+              </div>
+              <div class="impressionism-container">
+                <input
+                  type="radio"
+                  id="impressionism"
+                  value="%impressionism%"
+                />
+                <label for="impressionism"> Impressionism </label>
+              </div>
+              <div class="scenic-container">
+                <input type="radio" id="scenic" value="%scenic%" />
+                <label for="scenic"> Scenic </label>
+              </div>
+              <div class="abstract-container">
+                <input type="radio" id="abstract" value="%abstract%" />
+                <label for="abstract"> Abstract </label>
+              </div>
+            </div>
+          </div>
+          <div class="bundle">
+            <h3>Bundles</h3>
+            <input type="radio" id="bundles" />
+            <!-- <label for="bundles"> Bundles </label> -->
+          </div>
+        </div>
+      </section>
+
+      <div class="container">
+        <section class="main">
+          <section class="filter-options-container">
+            <div class="filter-options">
+              <div class="filter-toggle">
+                <button type="button" class="filter-panel-toggle">
+                  <p class="open-text">Open Filters</p>
+                  <i class="fa-solid fa-arrow-right open-icon"></i>
+                  <i class="fa-solid fa-arrow-left close-icon"></i>
+                </button>
+              </div>
+              <div class="search-sort-container">
+                <div class="search-container">
+                  <input
+                    id="search"
+                    type="text"
+                    required
+                    placeholder="Search for Art by Title"
+                  />
+                </div>
+                <div class="sortby">
+                  <select name="images" id="sorting" class="sortby">
+                    <option value="none">Sort By:</option>
+                    <option value="highestprice">Highest Price</option>
+                    <option value="lowestprice">Lowest Price</option>
+                  </select>
+                </div>
+              </div>
+              <div class="reset-container">
+                <button id="reset">Remove Filters</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="items">
+            <div class="zone grid-wrapper">
+              <head>
+                ITEMS ARE LOADED BY DATABASE, TEST ITEM:
+              </head>
+              <div class="box zone">
+                <img src="../img/Gallery/Abstract 1.jpg" alt="" />
+                <div class="caption">
+                  <div class="details">
+                    <p class="title">Title</p>
+                    <p class="size">Size</p>
+                    <p class="price">Price</p>
+                  </div>
+                  <div class="interact">
+                    <button class="like-btn">
+                      <i class="fa-regular fa-heart cap"></i>
+                    </button>
+                    <i class="fa-solid fa-cart-shopping cap"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <footer class="zone three">
+          <div class="newsletter">
+            <div class="newsletter-banner-wrapper">
+              <div class="letter-header">
+                <h3>Newsletter</h3>
+              </div>
+              <form class="newsletter-form" action="">
+                <div class="newsletter-input">
+                  <input
+                    type="email"
+                    required
+                    placeholder="Your Email Address"
+                  />
+                </div>
+                <br />
+                <button type="submit">Subscribe</button>
+              </form>
+            </div>
+          </div>
+          <div class="footer">
+            <div class="details-container">
+              <div class="row">
+                <div class="footer-col">
+                  <h4>company</h4>
+                  <ul>
+                    <li><a href="">about us</a></li>
+                    <li><a href="">our services</a></li>
+                    <li><a href="">privacy policy</a></li>
+                    <li><a href="">terms and conditions</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>help</h4>
+                  <ul>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">shipping</a></li>
+                    <li><a href="">returns</a></li>
+                    <li><a href="">order status</a></li>
+                    <li><a href="">payment options</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>our store</h4>
+                  <ul>
+                    <li><a href="">liked</a></li>
+                    <li><a href="">gallery</a></li>
+                    <li><a href="">bundles</a></li>
+                    <li><a href="">styles</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>follow us</h4>
+                  <div class="socials">
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom-pad"></div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>

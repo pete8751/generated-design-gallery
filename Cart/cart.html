@@ -13,8 +13,8 @@
     <nav class="zone zero sticky">
       <ul class="main-nav">
         <li><a href="../index.html">Home</a></li>
-        <li><a href="../Listings/listings.html">Gallery</a></li>
-        <li><a href="../Listings/listings.html">Liked</a></li>
+        <li><a href="../Listings/listings.html">Search</a></li>
+        <li><a href="../Gallery/Likes.html">Liked</a></li>
         <li class="push"><a href="./cart.html">Cart</a></li>
       </ul>
     </nav>
@@ -28,7 +28,7 @@
       <section class="cart">
         <div class="cart-wrapper">
           <div class="cart-body">
-            <table>
+            <table class="cart-table">
               <thead>
                 <tr>
                   <td>Remove</td>
@@ -67,7 +67,7 @@
         <div class="coupon">
           <h3>APPLY COUPON</h3>
           <div>
-            <input type="text" placeholder="Enter Your Coupon" />
+            <input class="code" type="text" placeholder="Enter Your Coupon" />
             <button class="apply">Apply</button>
           </div>
         </div>
@@ -75,9 +75,9 @@
         <div class="checkout">
           <h3>Cart Total</h3>
           <table class="checkout-table">
-            <tr class="total">
+            <tr class="sum">
               <td>Cart Total</td>
-              <td id="total">$XXX</td>
+              <td id="sum">$XXX</td>
             </tr>
             <tr class="shipping">
               <td>Shipping</td>
@@ -86,6 +86,10 @@
             <tr class="tax">
               <td>Tax</td>
               <td id="tax">$XXX</td>
+            </tr>
+            <tr class="total">
+              <td>Total</td>
+              <td id="total">$XXX</td>
             </tr>
             <tr class="discount">
               <td>Coupon Discounts</td>

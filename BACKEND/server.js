@@ -5,7 +5,6 @@ import cors from 'cors'
 
 const app = express();
 
-// app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(cors())
 
@@ -21,20 +20,18 @@ const db = knex({
   });
 
 
-// console.log(db.select('*').from('img'));
-
-// db.select('*').from('img').then(console.log(response));
+const defaultObj = {
+    Height: ['0', '100'],
+    Price: ['0', '100000'],
+    Search: "",
+    Style: [],
+    Width: ['0', '100'],
+    isBundle: false,
+    sortBy: "none"
+}
 
 app.get('/', (req, res) => {
-    // res.send('this is working');
-    console.log(req.body)
-    db.select('*').from('img').then(imgtable => {
-        res.json(imgtable)
-    })
-    // if (!found) {
-    //     res.status(400).json('not found');
-    // }
-    // res.send(db.select('*').from('img'));
+    dbFilter(defaultObj.Price, defaultObj.Height, defaultObj.Width, defaultObj.Style, defaultObj.isBundle, defaultObj.Search, defaultObj.sortBy).then(result => {res.json(result)})
 })
 
 app.post('/', (req, res) => {
@@ -53,10 +50,6 @@ app.post('/cart', (req, res) => {
         db.select('*').from('img').where('imgid', cart[0]).then(result => {res.json(result)})
     }
 })
-
-// const bundleobj = await db.select('').from('img').where('imgid', 23)
-// console.log(bundleobj)
-
 
 app.post('/Product%20Closeup/Item.html', (req, res) => {
     const imgid = req.body.imgid
@@ -83,22 +76,10 @@ const testObj = {
     sortBy: "lowestprice"
 }
 
-// app.get('/', (req, res) => {
-//     res.send('this is working');
-// })
 
 app.listen(3000, () =>{
     console.log('app is running on port 3000');
 })
-
-
-//  --> res = this is working
-// /signin --> POST = success/fail
-// /register --> POST = user
-// /profile/:userID
-// /usercart --> PUT
-// styleFilter(db, testObj.Style).then(console.log)
-// dbFilter(testObj.Price, testObj.Height, testObj.Width, testObj.Style, testObj.isBundle, testObj.Search, testObj.sortBy).then(console.log)
 
 
 async function dbFilter(Price, Height, Width, Style, isBundle, Search, sortBy) {
@@ -107,8 +88,6 @@ async function dbFilter(Price, Height, Width, Style, isBundle, Search, sortBy) {
         return db.select('*').from('img').where('price','>', Price[0]).andWhere('price','<', Price[1]).intersect([
             heightFilter(db, Height), widthFilter(db, Width), styleFilter(db, Style), bundleFilter(db, isBundle), dbSearch(db, Search)])
     } else {
-        // db.select('*').from('img').where('price','>', Price[0]).andWhere('price','<', Price[1]).intersect([
-        //     heightFilter(db, Height), widthFilter(db, Width), styleFilter(db, Style), bundleFilter(db, isBundle), dbSearch(db, Search)]).orderBy('price', sortValue(sortBy)).then(console.log)
         return db.select('*').from('img').where('price','>', Price[0]).andWhere('price','<', Price[1]).intersect([
             heightFilter(db, Height), widthFilter(db, Width), styleFilter(db, Style), bundleFilter(db, isBundle), dbSearch(db, Search)]).orderBy('price', sortValue(sortBy))          
     }
@@ -127,14 +106,8 @@ function sortValue(value) {
     }
 }
 
-// function priceFilter(db, Price) {
-//     return db.select('*').from('img').where('price','>', Price[0]).andWhere('price','<', Price[1])
-//     .then(result => console.log(result))
-// }
-
 function heightFilter(db, Height) {
     return db.select('*').from('img').where('height','>', Height[0]).andWhere('height','<', Height[1])   
-    // return db1
 }
 
 function widthFilter(db, Width) {
@@ -169,29 +142,5 @@ function dbSearch(db, search){
     }
 }
 
-// function look(Search){
-//     //  console.log(typeof(`%${Search}%`))
-//      return db.select('*').from('img').whereILike('img_name', Search);  
-// }
-
-// look("%Modern%").then(console.log)
-// console.log(priceFilter(db, [0, 10001]).intersect([heightFilter(db, [0, 10])]));
-
-// db.select('*').from('img').where('price','>', 0).andWhere('price','<', 10001).intersect([
-//     heightFilter(db, [0, 20]), widthFilter(db, [0, 10])
-// ]).then(console.log)
-
-// console.log(styleFilter(db, ["Modern", "Abstract"]))
-// db.select('*').from('img').intersect([db.select('*').from('img').where('style', "Modern"), db.select('*').from('img').where('style', "Abstract")]).then(console.log)
-// console.log(I.then(console.log))
-// db.select('*').from('img').where('price','>', 0).andWhere('price','<', 10000).intersect(db.select('*').from('img').where('height','>', 0).andWhere('height','<', 10000)).then(console.log)
-// priceFilter(db, [0, 10001]).then(console.log);
-// const Style = ["Modern", "Abstract"]
-// Style.forEach(element => {
-//     return db.select('*').from('img').where('style', element);
-// })
-
-// styleFilter(db, ["%modern%"]).then(console.log)
-// dbSearch(db, "Metropolis").then(console.log)
 
 

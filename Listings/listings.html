@@ -9,30 +9,40 @@
     ></script>
   </head>
   <body>
-    <nav class="zone zero sticky">
+    <nav class="nav-container sticky">
       <ul class="main-nav">
         <li><a href="../index.html">Home</a></li>
-        <li><a href="./listings.html">Gallery</a></li>
-        <li><a href="./listings.html">Liked</a></li>
-        <li class="push"><a href="../Cart/cart.html">Cart</a></li>
+        <li class="active"><a href="./listings.html">Search</a></li>
+        <div class="push">
+          <li>
+            <a href="../Gallery/Likes.html">
+              Liked <i class="fa-regular fa-heart"></i>
+            </a>
+          </li>
+          <li class="push">
+            <a href="../Cart/cart.html">
+              Cart <i class="fa-solid fa-bag-shopping"></i>
+            </a>
+          </li>
+        </div>
       </ul>
     </nav>
 
     <div class="wrapper">
       <section class="panel">
-        <div class="filter-panel">
+        <div class="filter-panel fade">
           <div class="price-filter">
             <h3 class="filter-label">Price</h3>
             <div class="inputs">
               <div class="field">
                 <span>Min</span>
-                <input type="number" class="price input input-min" value="0" />
+                <input type="number" class="cost input input-min" value="0" />
               </div>
               <div class="range-input">
                 <input
                   type="range"
-                  class="price range range-min"
-                  min="0"
+                  class="cost range range-min"
+                  max="100000"
                   value="0"
                 />
               </div>
@@ -41,14 +51,14 @@
                 <span>Max</span>
                 <input
                   type="number"
-                  class="price input input-max"
+                  class="cost input input-max"
                   value="100000"
                 />
               </div>
               <div class="range-input">
                 <input
                   type="range"
-                  class="price range range-max"
+                  class="cost range range-max"
                   max="100000"
                   value="100000"
                 />
@@ -211,29 +221,6 @@
                   </div>
                 </div>
               </div>
-              <!-- <div class="box zone">
-                <a class="image-container" href="../Product Closeup/Item.html">
-                  <img src="../img/Gallery/Abstract 1.jpg" alt="" />
-                </a>
-              </div> -->
-              <!-- <div class="box zone">
-                <img src="img/desktop_analytics_2.png" alt="" />
-              </div>
-              <div class="box zone">
-                <img src="img/server_2_2.png" alt="" />
-              </div>
-              <div class="box zone">
-                <img src="img/monitor_coding_2.png" alt="" />
-              </div>
-              <div class="box zone">
-                <img src="img/server_safe_2.png" alt="" />
-              </div>
-              <div class="box zone">
-                <img src="img/server_3.png" alt="" />
-              </div>
-              <div class="box zone">
-                <img src="img/monitor_settings_2.png" alt="" />
-              </div> -->
             </div>
           </section>
         </section>

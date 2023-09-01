@@ -18,6 +18,7 @@ if (carted.length == 0) {
             currObj = object
             displayCart(tbody, object)
         })
+        .then(() => fillValues())
 
 }
 
@@ -43,7 +44,7 @@ function displayCart(tableBody, array) {
 function enterData(row, element, i) {
     const remove = document.createElement("td")
     const icon = document.createElement("icon")
-    icon.classList.add("fa-solid", "fa-heart", "cap")
+    icon.classList.add("fa-solid", "fa-square-minus", "cap")
     remove.appendChild(icon)
 
     const image = document.createElement("td")
@@ -75,35 +76,84 @@ function enterData(row, element, i) {
     row.appendChild(description);
     row.appendChild(price);
     row.appendChild(quant);
+
+    icon.addEventListener('click', () => {
+        removeItem(element)
+        row.textContent = ""
+    })
 }
+
+//Remove Button
+function removeItem(object){
+    let currData = getUserDataFromCookie("user")
+    let userCart = currData.carted
+    let amount = currData.quantity
+    let i = userCart.indexOf(object.img_id)
+    userCart.splice(i, 1)
+    amount.splice(i, 1)
+    updateUserDataInCookie("user", currData)
+    fillValues()
+}
+
+//Discount
+let discountEnabled = false
+const coupon = document.querySelector(".code")
+const apply = document.querySelector(".apply")
+
+apply.addEventListener('click', () => {
+    if (coupon.value == "FREE100") {
+        discountEnabled = true
+        fillValues()
+    }
+})
 
 //Transaction Menu
 
-const total = document.getElementById("total");
-const shipping = document.getElementById("shipping");
-const tax = document.getElementById("tax");
-const discount = document.getElementById("discount");
-const final = document.getElementById("final");
+function fillValues() {
+    const total = document.getElementById("sum");
+    const shipping = document.getElementById("shipping");
+    const tax = document.getElementById("tax");
+    const discount = document.getElementById("discount");
+    const total1 = document.getElementById("total");
 
-console.log(currObj)
-const sum = `$${calculateTotal(currObj, cartInfo.quantity)}`;
-const ship = `$${10}`;
-const taxAmount = `$${sum * 0.15}`;
-const disc = `$${0}`;
-const finTotal = `$${sum + ship + taxAmount - disc}`;
+    const sum = getTotal(tbody);
+    console.log(sum)
+    const ship = 10;
+    const taxAmount = sum * 0.15
+    const totalValue = sum + ship + taxAmount
+    let disc = 0
 
-total.textContent = sum;
-shipping.textContent = ship;
-tax.textContent = taxAmount;
-discount.textContent = disc;
-final.textContent = finTotal;
-
-function calculateTotal(obj, quantities) {
-    let total = 0;
-    console.log(obj.length)
-    for (let i = 0; i < obj.length; i++) {
-      total += obj[i].price * quantities[i];
+    if (discountEnabled) {
+        disc = totalValue
     }
-    console.log(total)
-    return total;
-  }
+    console.log(totalValue)
+
+    const finalValue = sum + ship + taxAmount - disc;
+
+    total.textContent = `$${sum}`;
+    shipping.textContent = `$${ship}`;;
+    tax.textContent = `$${taxAmount}`;
+    discount.textContent = `$${disc}`;
+    total1.textContent = `$${totalValue}`;
+    final.textContent = `$${finalValue}`;
+}
+
+function getTotal(table){
+    let total = 0
+    for (var i = 0; i < table.rows.length; i++){
+        console.log(table.rows[i].cells[3].textContent)
+        total += parseFloat(table.rows[i].cells[3].textContent)
+        console.log(total)
+    }
+    return total
+}
+
+// function calculateTotal(obj, quantities) {
+//     let total = 0;
+//     console.log(obj.length)
+//     for (let i = 0; i < obj.length; i++) {
+//       total += obj[i].price * quantities[i];
+//     }
+//     console.log(total)
+//     return total;
+//   }

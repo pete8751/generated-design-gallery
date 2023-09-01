@@ -3,59 +3,64 @@
   <head>
     <title>Layout Master</title>
     <link rel="stylesheet" type="text/css" href="./style.css" />
-    <!-- <link rel="stylesheet" href="style2.css" /> -->
     <script
       src="https://kit.fontawesome.com/269b861063.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <nav class="zone zero sticky">
+    <nav class="nav-container sticky">
       <ul class="main-nav">
         <li><a href="./index.html">Home</a></li>
-        <li><a href="./Listings/listings.html">Gallery</a></li>
-        <li><a href="./Listings/listings.html">Liked</a></li>
-        <li class="push"><a href="./Cart/cart.html">Cart</a></li>
+        <li><a href="./Listings/listings.html">Search</a></li>
+        <div class="push">
+          <li>
+            <a href="./Gallery/Likes.html">
+              Liked <i class="fa-regular fa-heart"></i>
+            </a>
+          </li>
+          <li>
+            <a href="./Cart/cart.html">
+              Cart <i class="fa-solid fa-bag-shopping"></i>
+            </a>
+          </li>
+        </div>
       </ul>
     </nav>
 
     <div class="cover zone">
       <h1>Online AI Art Gallery</h1>
-      <!-- <img class="cover" src="img/Main Banner Background.jpg" /> -->
     </div>
-
-    <!-- <section class="style zone one">
-      <div class="section_container">
-        <header>Choose from different styles</header>
-        <div class="section_body">
-          <div class="Carousel"></div>
-        </div>
-      </div>
-    </section> -->
 
     <section class="collections zone one">
       <div class="section_container">
         <div class="caption">
-          <header class="collections">See our Collections</header>
+          <header class="collections">View our Collections</header>
         </div>
         <!-- Slideshow container -->
         <div class="slideshow-container">
           <!-- Full-width images with number and caption text -->
           <div class="mySlides fade">
             <div class="numbertext">1 / 3</div>
-            <img src="img/Gallery/Metropolis 1.jpg" style="width: 100%" />
+            <a id="1" href="./Product Closeup/Item.html"
+              ><img src="img/Gallery/Metropolis 1.jpg" style="width: 100%"
+            /></a>
             <div class="text">Metropolis Collection</div>
           </div>
 
           <div class="mySlides fade">
             <div class="numbertext">2 / 3</div>
-            <img src="img/Gallery/Dark Modern 1.jpg" style="width: 100%" />
+            <a id="2" href="./Product Closeup/Item.html"
+              ><img src="img/Gallery/Dark Modern 1.jpg" style="width: 100%"
+            /></a>
             <div class="text">Dark Modern Suite</div>
           </div>
 
           <div class="mySlides fade">
             <div class="numbertext">3 / 3</div>
-            <img src="img/Gallery/Van Gogh 1.jpg" style="width: 100%" />
+            <a id="3" href="./Product Closeup/Item.html"
+              ><img src="img/Gallery/Van Gogh 1.jpg" style="width: 100%"
+            /></a>
             <div class="text">Impressionism Set</div>
           </div>
 

@@ -17,10 +17,6 @@ fetch('http://localhost:3000/Product%20Closeup/Item.html', {method: "POST", head
 .then(data => {productDisplay(data)})
 
 const bigContainer = document.getElementById("big")
-const small1 = document.getElementById("1")
-const small2 = document.getElementById("2")
-const small3 = document.getElementById("3")
-
 const bundlebtn = document.querySelector(".bundle-btn")
 
 function productDisplay(response) {
@@ -29,15 +25,17 @@ function productDisplay(response) {
         initializeBundleBtn(response)
 
         let i = 0
-        response.forEach(element => {
-            console.log(element)
+        response.forEach(object => {
+            console.log(object)
             if (i == 0 ){
-                bigContainer['src'] = element.url
+                bigContainer['src'] = object.url
+                updateDetails(object)
             } else {
                 let small = document.getElementById(`${i}`)
                 console.log(small)
-                small['src'] = element.url
-                small.addEventListener('click', () => swapBig(small))
+                small['src'] = object.url
+                let swapBig1 = (element) => swapBig(element, object)
+                small.addEventListener('click', () => swapBig1(small))
             }
             i++
         });
@@ -46,28 +44,30 @@ function productDisplay(response) {
         bundlebtn.classList.toggle("hide")
         const bundle = document.querySelector(".bundle")
         bundle.textContent = ""
+        updateDetails(response)
     }
 }
 
-// small1.addEventListener('click', () =>{
-//     swapBig(small1)
-// })
-
-// small2.addEventListener('click', () =>{
-//     swapBig(small2)
-// })
-
-// small3.addEventListener('click', () =>{
-//     swapBig(small3)
-// })
 
 //swap
-function swapBig(element) {
+function swapBig(element, object) {
     let bigUrl = bigContainer['src']
     let smallUrl = element['src']
 
-    bigContainer['src'] = smallUrl
-    element["src"] = bigUrl
+    bigContainer['src'] = smallUrl;
+    element["src"] = bigUrl;
+    updateDetails(object);
+}
+
+//Listing Details
+const small1 = document.getElementById("1")
+const pricetext = document.getElementById("product-price")
+const name = document.getElementById("product-name")
+
+function updateDetails(object){
+    name.textContent = object.img_name
+    pricetext.textContent = object.price
+    console.log(object)
 }
 
 //Buy Buttons

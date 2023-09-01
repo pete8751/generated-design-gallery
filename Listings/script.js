@@ -146,30 +146,35 @@ function createInteract(element) {
 }
 
 
-function togglepanel() {
-    wrapper.classList.toggle("panel-open");
-    console.log("TOGGLED")
-}
-
 //Filters
 let wrapper = document.querySelector(".wrapper");
 let panelbutton = document.querySelector(".filter-panel-toggle");
 
 //Price
-let minprice = document.querySelector(".price.range-min");
-let maxprice = document.querySelector(".price.range-max");
-let minpricetext = document.querySelector(".price.input-min");
-let maxpricetext = document.querySelector(".price.input-max");
+let minprice = document.querySelector(".cost.range-min");
+let maxprice = document.querySelector(".cost.range-max");
+let minpricetext = document.querySelector(".cost.input-min");
+let maxpricetext = document.querySelector(".cost.input-max");
 
 
 panelbutton.addEventListener("click", togglepanel)
 
+function togglepanel() {
+  wrapper.classList.toggle("panel-open");
+  let panel = document.querySelector(".panel")
+  console.log(panel)
+  let width = panel.offSetWidth
+
+  console.log(width)
+}
+
 minprice.addEventListener("input", () => {
     minpricetext.value = minprice.value
+    console.log(minprice.value)
     reloadGallery()
 })
 
-minpricetext.addEventListener("input", () =>{
+minpricetext.addEventListener("input", () => {
     minprice.value = minpricetext.value
     reloadGallery()
 })
@@ -339,6 +344,8 @@ function reloadGallery(){
         Search: searchValue,
         sortBy: sort
     }
+
+    console.log(filterObj)
     // console.log(filterObj)
 
     fetch('http://localhost:3000/', {method: "POST", headers: {

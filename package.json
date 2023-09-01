@@ -5,11 +5,14 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon"
+    "start": "nodemon",
+    "clean": "postcss style.css --dir purged"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "nodemon": "^3.0.1",
+    "postcss-cli": "^10.1.0"
   }
 }

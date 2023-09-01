@@ -58,6 +58,30 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+
+const link1 = document.getElementById("1")
+const link2 = document.getElementById("2")
+const link3 = document.getElementById("3")
+
+link1.addEventListener('click', () =>{
+    updateClicked(13)
+})
+
+link2.addEventListener('click', () =>{
+    updateClicked(7)
+})
+
+link3.addEventListener('click', () =>{
+    updateClicked(19)
+})
+
+function updateClicked(imgid){
+    const currData = getUserDataFromCookie("user");
+    currData.clicked = imgid;
+    updateUserDataInCookie("user", currData);
+    console.log(getCookie("user"))
+}
+
 // autoSlide();
 
 // function autoSlide() {

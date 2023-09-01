@@ -100,9 +100,7 @@ a {
     background-size: cover;
 }
 
-/* table {
-    width: 100%;
-} */
+/* Cart */
 .wrapper{
     background-color:#902A47;
 }
@@ -165,6 +163,10 @@ a {
 .cart-body table td:nth-child(4), .cart-body table td:nth-child(5), .cart-body table td:nth-child(6){
     width: 150px;
     text-align: center;
+}
+
+.cap{
+    cursor: pointer;
 }
 
 /* Transaction */
