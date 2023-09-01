@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: auto 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -75,7 +80,7 @@ body {
     }
 }
 
-li {
+.main-nav > li {
     box-sizing: border-box;
     padding: 20px;
     height: 100%;
@@ -182,6 +187,7 @@ border: 5px outset;
     margin-right: 10px;
     background-color: brown;
     border: none;
+    cursor: pointer;
 }
 
 /*GRID*/
@@ -199,116 +205,168 @@ border: 5px outset;
 .box {
     background-color: #444;
     /* padding: 130px; */
+    min-width: 300px;
     margin: 20px;
     cursor: pointer;
+    display: flex;
+    border: 5px outset;
 }
 
 /* footer */
-footer {
-    text-align: center;
-}
-
-.footer {
-    box-sizing: border-box;
-    width: 100%;
-    /* padding: 100px 15%; */
-    display: flex;
-    justify-content: center;
-    /* height: 20vh; */
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-top: 5.6rem;
-}
-
-.footer div {
-    text-align: center;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto 1fr;
-}
-
-/* .footer-column ul{
-    display: block;
-} */
-
-.column-header {
-    cursor: pointer;
-}
-
-.footer-column-social{
-    text-align: center;
-}
-
-.footer div h3 {
-    font-weight: 300;
-    margin-bottom: 1px;
-}
-
-.socials {
-    margin-top: auto;
-}
-
-.socials i {
-    font-size: 22px;
+.details-container{
+    max-width: 1170px;
+    /* background-color: red; */
     margin: auto;
-    cursor: pointer;
-}
-
-/* Newsletter */
-.newsletter {
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    padding: 4.8rem;
-    background-color: #352126;
-}
-
-.newsletter-banner-wrapper {
- display: flex;
-}
-
-.newsletter h3 {
-    margin: auto;
-}
-
-.letter-header {
-    padding: 1.6rem;
-    display: flex;
-
-}
-
-.newsletter-form {
-    display: flex;
-    gap: 0.8rem;
-    padding: 1.6rem;
-}
-
-.newsletter-input {
-    align-items: center;
-}
-
-form input {
-    width: 400px;
-    height: 45px;
-    border-radius: 4px;
-    text-align: center;
-    /* margin-top: 20px;
-    margin-bottom: 40px; */
-    outline: none;
-    border: none;
-}
-form button {
-    border: 2px solid;
-    border-radius: 30px;
-    padding: 10px 30px;
-    font-size: 15px;
-    cursor: pointer;
-}
+    }
+    
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    ul{
+        list-style: none;
+        padding-inline-start: 0;
+    }
+    
+    .footer {
+        background-color: black;
+        padding: 70px 0;
+    }
+    
+    .footer-col{
+        width: 25%;
+        padding: 0 15px;
+    }
+    
+    .footer-col h4{
+        font-size: 18px;
+        color: #444;
+        text-transform: capitalize;
+        margin-bottom: 35px;
+        font-weight: 500;
+        position:relative;
+    }
+    .footer-col h4::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        background-color: #902A47;
+        height: 2px;
+        box-sizing: border-box;
+        width: 50px;
+    }
+    
+    .footer-col ul li:not(:last-child){
+        margin-bottom: 20px;
+    }
+    
+    .footer-col ul li a{
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #D1493D;
+        text-decoration: none;
+        font-weight: 300;
+        color: #f5f5f6;
+        display: block;
+        transition: all 0.3s ease;
+    }
+    .footer-col ul li a:hover{
+        color: #D1493D;
+        padding-left: 8px;
+    }
+    
+    .footer-col .socials a{
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        background-color: rgba(255, 255, 255, 0.2);
+        margin: 0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        color: #f5f5f6;
+        transition: all 0.5s ease;
+    }
+    
+    .footer-col .socials a:hover{
+        color: #D1493D;
+        background-color: #444;
+    }
+    
+    .bottom-pad{
+        height: 100px;
+        /* background-color: gray; */
+    }
+    
+    @media(max-width: 767px){
+        .footer-col {
+            width: 50%;
+            margin-bottom: 30px;
+        }
+    }
+    
+    @media(max-width: 574px){
+        .footer-col {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+    
+    /* Newsletter */
+    .newsletter {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        padding: 4rem;
+        background-color: #352126;
+        /* background-image: url(img/newsletter\ background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; */
+    }
+    
+    .newsletter-banner-wrapper {
+     display: flex;
+    }
+    
+    .newsletter h3 {
+        margin: auto;
+    }
+    
+    .letter-header {
+        padding: 1.6rem;
+        display: flex;
+    
+    }
+    
+    .newsletter-form {
+        display: flex;
+        gap: 0.8rem;
+        padding: 1.6rem;
+    }
+    
+    .newsletter-input {
+        align-items: center;
+    }
+    
+    form input {
+        width: 400px;
+        height: 45px;
+        border-radius: 4px;
+        text-align: center;
+        /* margin-top: 20px;
+        margin-bottom: 40px; */
+        outline: none;
+        border: none;
+    }
+    form button {
+        border: 2px solid;
+        border-radius: 30px;
+        padding: 10px 30px;
+        font-size: 15px;
+        cursor: pointer;
+    }
 
 
 /*https://paulund.co.uk/how-to-create-shiny-css-buttons*/

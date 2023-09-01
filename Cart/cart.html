@@ -15,7 +15,7 @@
         <li><a href="../index.html">Home</a></li>
         <li><a href="../Listings/listings.html">Gallery</a></li>
         <li><a href="../Listings/listings.html">Liked</a></li>
-        <li class="push"><a href="./Cart/cart.html">Cart</a></li>
+        <li class="push"><a href="./cart.html">Cart</a></li>
       </ul>
     </nav>
 
@@ -24,80 +24,82 @@
       <!-- <img class="cover" src="img/Main Banner Background.jpg" /> -->
     </div>
 
-    <section class="cart">
-      <div class="cart-wrapper">
-        <div class="cart-body">
-          <table>
-            <thead>
-              <tr>
-                <td>Remove</td>
-                <td>Product</td>
-                <td>Description</td>
-                <td>Price</td>
-                <td>Quantity</td>
-              </tr>
-            </thead>
-            <tbody class="inventory">
-              <tr class="item1">
-                <td class="remove">RRR</td>
-                <td class="image">III</td>
-                <td class="price">PPP</td>
-                <td class="quantity">QQQ</td>
-              </tr>
-              <tr class="item2">
-                <td class="remove">RRR</td>
-                <td class="image">III</td>
-                <td class="price">PPP</td>
-                <td class="quantity">QQQ</td>
-              </tr>
-              <tr class="item3">
-                <td class="remove">RRR</td>
-                <td class="image">III</td>
-                <td class="price">PPP</td>
-                <td class="quantity">QQQ</td>
-              </tr>
-            </tbody>
+    <div class="wrapper">
+      <section class="cart">
+        <div class="cart-wrapper">
+          <div class="cart-body">
+            <table>
+              <thead>
+                <tr>
+                  <td>Remove</td>
+                  <td>Product</td>
+                  <td>Description</td>
+                  <td>Price</td>
+                  <td>Quantity</td>
+                </tr>
+              </thead>
+              <tbody class="inventory">
+                <tr class="item1">
+                  <td class="remove">RRR</td>
+                  <td class="image">III</td>
+                  <td class="price">PPP</td>
+                  <td class="quantity">QQQ</td>
+                </tr>
+                <tr class="item2">
+                  <td class="remove">RRR</td>
+                  <td class="image">III</td>
+                  <td class="price">PPP</td>
+                  <td class="quantity">QQQ</td>
+                </tr>
+                <tr class="item3">
+                  <td class="remove">RRR</td>
+                  <td class="image">III</td>
+                  <td class="price">PPP</td>
+                  <td class="quantity">QQQ</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="transaction">
+        <div class="coupon">
+          <h3>APPLY COUPON</h3>
+          <div>
+            <input type="text" placeholder="Enter Your Coupon" />
+            <button class="apply">Apply</button>
+          </div>
+        </div>
+
+        <div class="checkout">
+          <h3>Cart Total</h3>
+          <table class="checkout-table">
+            <tr class="total">
+              <td>Cart Total</td>
+              <td id="total">$XXX</td>
+            </tr>
+            <tr class="shipping">
+              <td>Shipping</td>
+              <td id="shipping">$XXX</td>
+            </tr>
+            <tr class="tax">
+              <td>Tax</td>
+              <td id="tax">$XXX</td>
+            </tr>
+            <tr class="discount">
+              <td>Coupon Discounts</td>
+              <td id="discount">$XXX</td>
+            </tr>
+            <tr class="final">
+              <td>Final Total</td>
+              <td id="final">$XXX</td>
+            </tr>
           </table>
+          <button class="purchase">Purchase</button>
         </div>
-      </div>
-    </section>
-
-    <section class="transaction">
-      <div class="coupon">
-        <h3>APPLY COUPON</h3>
-        <div>
-          <input type="text" placeholder="Enter Your Coupon" />
-          <button class="apply">Apply</button>
-        </div>
-      </div>
-
-      <div class="checkout">
-        <h3>Cart Total</h3>
-        <table>
-          <tr class="total">
-            <td>Cart Total</td>
-            <td id="total">$XXX</td>
-          </tr>
-          <tr class="shipping">
-            <td>Shipping</td>
-            <td id="shipping">$XXX</td>
-          </tr>
-          <tr class="tax">
-            <td>Tax</td>
-            <td id="tax">$XXX</td>
-          </tr>
-          <tr class="discount">
-            <td>Coupon Discounts</td>
-            <td id="discount">$XXX</td>
-          </tr>
-          <tr class="final">
-            <td>Final Total</td>
-            <td id="final">$XXX</td>
-          </tr>
-        </table>
-        <button class="purchase">Purchase</button>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <footer class="zone three">
       <div class="newsletter">
@@ -116,38 +118,46 @@
       </div>
       <div class="footer">
         <div class="details-container">
-          <div class="footer-grid">
-            <div class="footer-column-about">
-              <div class="column-header">ABOUT US</div>
-              <ul class="list0"></ul>
-            </div>
-            <div class="footer-column-services">
-              <div class="column-header">OUR SERVICES</div>
-              <ul class="list1"></ul>
-            </div>
-            <div class="footer-column-contact">
-              <div class="column-header">CONTACT US</div>
-              <ul class="list2"></ul>
-            </div>
-            <div class="footer-column-support">
-              <div class="column-header">SUPPORT US</div>
-              <ul class="list3"></ul>
-            </div>
-            <div class="footer-column-social">
-              <div class="column-header">FOLLOW US</div>
-              <ul class="list4">
-                <li class="socials-icon">
-                  <i class="fa-brands fa-facebook"></i>
-                </li>
-                <li class="socials-icon">
-                  <i class="fa-brands fa-twitter"></i>
-                </li>
-                <li class="socials-icon">
-                  <i class="fa-brands fa-github"></i>
-                </li>
+          <div class="row">
+            <div class="footer-col">
+              <h4>company</h4>
+              <ul>
+                <li><a href="">about us</a></li>
+                <li><a href="">our services</a></li>
+                <li><a href="">privacy policy</a></li>
+                <li><a href="">terms and conditions</a></li>
               </ul>
             </div>
+            <div class="footer-col">
+              <h4>help</h4>
+              <ul>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">shipping</a></li>
+                <li><a href="">returns</a></li>
+                <li><a href="">order status</a></li>
+                <li><a href="">payment options</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>our store</h4>
+              <ul>
+                <li><a href="">liked</a></li>
+                <li><a href="">gallery</a></li>
+                <li><a href="">bundles</a></li>
+                <li><a href="">styles</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>follow us</h4>
+              <div class="socials">
+                <a href=""><i class="fa-brands fa-github"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+              </div>
+            </div>
           </div>
+          <div class="bottom-pad"></div>
         </div>
       </div>
     </footer>

@@ -22,7 +22,7 @@
       <section class="panel">
         <div class="filter-panel">
           <div class="price-filter">
-            <h3>Price</h3>
+            <h3 class="filter-label">Price</h3>
             <div class="inputs">
               <div class="field">
                 <span>Min</span>
@@ -56,7 +56,7 @@
             </div>
           </div>
           <div class="height-filter">
-            <h3>Height</h3>
+            <h3 class="filter-label">Height</h3>
             <div class="inputs">
               <div class="field">
                 <span>Min</span>
@@ -90,7 +90,7 @@
             </div>
           </div>
           <div class="width-filter">
-            <h3>Width</h3>
+            <h3 class="filter-label">Width</h3>
             <div class="inputs">
               <div class="field">
                 <span>Min</span>
@@ -123,8 +123,8 @@
               </div>
             </div>
           </div>
-          <div class="stylefilter">
-            <h3>Styles</h3>
+          <div class="style-filter">
+            <h3 class="filter-label">Styles</h3>
             <div class="style-options">
               <div class="modern-container">
                 <input type="radio" id="modern" value="%modern%" />
@@ -162,33 +162,39 @@
             <div class="filter-options">
               <div class="filter-toggle">
                 <button type="button" class="filter-panel-toggle">
+                  <p class="open-text">Open Filters</p>
                   <i class="fa-solid fa-arrow-right open-icon"></i>
                   <i class="fa-solid fa-arrow-left close-icon"></i>
                 </button>
               </div>
+              <div class="search-sort-container">
+                <div class="search-container">
+                  <input
+                    id="search"
+                    type="text"
+                    required
+                    placeholder="Search for Art by Title"
+                  />
+                </div>
+                <div class="sortby">
+                  <select name="images" id="sorting" class="sortby">
+                    <option value="none">Sort By:</option>
+                    <option value="highestprice">Highest Price</option>
+                    <option value="lowestprice">Lowest Price</option>
+                  </select>
+                </div>
+              </div>
               <div class="reset-container">
                 <button id="reset">Remove Filters</button>
-              </div>
-              <div class="sortby">
-                <select name="images" id="sorting" class="sortby">
-                  <option value="none">Sort By:</option>
-                  <option value="highestprice">Highest Price</option>
-                  <option value="lowestprice">Lowest Price</option>
-                </select>
-              </div>
-              <div class="search-container">
-                <input
-                  id="search"
-                  type="text"
-                  required
-                  placeholder="Search for Art by Title"
-                />
               </div>
             </div>
           </section>
 
           <section class="items">
-            <div class="zone two grid-wrapper">
+            <div class="zone grid-wrapper">
+              <head>
+                ITEMS ARE LOADED BY DATABASE, TEST ITEM:
+              </head>
               <div class="box zone">
                 <img src="../img/Gallery/Abstract 1.jpg" alt="" />
                 <div class="caption">
@@ -205,12 +211,12 @@
                   </div>
                 </div>
               </div>
-              <div class="box zone">
+              <!-- <div class="box zone">
                 <a class="image-container" href="../Product Closeup/Item.html">
                   <img src="../img/Gallery/Abstract 1.jpg" alt="" />
                 </a>
-              </div>
-              <div class="box zone">
+              </div> -->
+              <!-- <div class="box zone">
                 <img src="img/desktop_analytics_2.png" alt="" />
               </div>
               <div class="box zone">
@@ -227,7 +233,7 @@
               </div>
               <div class="box zone">
                 <img src="img/monitor_settings_2.png" alt="" />
-              </div>
+              </div> -->
             </div>
           </section>
         </section>
@@ -253,38 +259,46 @@
           </div>
           <div class="footer">
             <div class="details-container">
-              <div class="footer-grid">
-                <div class="footer-column-about">
-                  <div class="column-header-about">ABOUT US</div>
-                  <ul class="list0"></ul>
-                </div>
-                <div class="footer-column-services">
-                  <div class="column-header-services">OUR SERVICES</div>
-                  <ul class="list1"></ul>
-                </div>
-                <div class="footer-column-contact">
-                  <div class="column-header-contact">CONTACT US</div>
-                  <ul class="list2"></ul>
-                </div>
-                <div class="footer-column-support">
-                  <div class="column-header-support">SUPPORT US</div>
-                  <ul class="list3"></ul>
-                </div>
-                <div class="footer-column-social">
-                  <div class="column-header-social">FOLLOW US</div>
-                  <ul class="list4">
-                    <li class="socials-icon">
-                      <i class="fa-brands fa-facebook"></i>
-                    </li>
-                    <li class="socials-icon">
-                      <i class="fa-brands fa-twitter"></i>
-                    </li>
-                    <li class="socials-icon">
-                      <i class="fa-brands fa-github"></i>
-                    </li>
+              <div class="row">
+                <div class="footer-col">
+                  <h4>company</h4>
+                  <ul>
+                    <li><a href="">about us</a></li>
+                    <li><a href="">our services</a></li>
+                    <li><a href="">privacy policy</a></li>
+                    <li><a href="">terms and conditions</a></li>
                   </ul>
                 </div>
+                <div class="footer-col">
+                  <h4>help</h4>
+                  <ul>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">shipping</a></li>
+                    <li><a href="">returns</a></li>
+                    <li><a href="">order status</a></li>
+                    <li><a href="">payment options</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>our store</h4>
+                  <ul>
+                    <li><a href="">liked</a></li>
+                    <li><a href="">gallery</a></li>
+                    <li><a href="">bundles</a></li>
+                    <li><a href="">styles</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>follow us</h4>
+                  <div class="socials">
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                  </div>
+                </div>
               </div>
+              <div class="bottom-pad"></div>
             </div>
           </div>
         </footer>
