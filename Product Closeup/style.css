@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap');
 *{
     margin: 0;
     box-sizing: border-box;
@@ -5,7 +6,8 @@
 
 body {
     margin: auto 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
 }
 
 
@@ -51,6 +53,19 @@ body {
 }
 
 
+/*NAV*/
+
+.nav-container{
+    background: #902A47;
+    font-size:2em;
+}
+
+.sticky{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
 .main-nav {
     display: flex;
     list-style: none;
@@ -65,14 +80,40 @@ body {
     }
 }
 
-.main-nav > li {
-    box-sizing: border-box;
-    padding: 20px;
+.main-nav li {
+    /* padding: 20px 40px; */
     height: 100%;
     text-align: center;
     list-style: none;
     transition: 0.3s;
 }
+
+.nav-container ul li a{
+    font-size: 1em;
+    padding: 20px 40px;
+    text-transform: capitalize;
+    color: #D1493D;
+    text-decoration: none;
+    font-weight: 300;
+    color: #f5f5f6;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.nav-container ul li a:hover{
+    color: #D1493D;
+    padding: 20px 60px;
+}
+
+.active a{
+    color: #D1493D !important;
+    padding: 20px 60px !important;
+}
+
+.main-nav > .active{
+    background-color: #352126;
+}
+
 
 a {
     color: #f5f5f6;
@@ -80,12 +121,14 @@ a {
 }
 
 .push {
+    display: flex;
     margin-left: auto;
 }
 
-.main-nav > li:hover{
+.main-nav li:hover{
     background-color: #352126;
     }
+
 
 /*COVER*/
 .container {
@@ -160,6 +203,11 @@ border: 5px outset;
     background-color: brown;
     border: none;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.buy-btn:hover, .bundle-btn:hover{
+    background-color: white;
 }
 
 .bundle-btn {
@@ -171,6 +219,7 @@ border: 5px outset;
     background-color: brown;
     border: none;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 /*GRID*/
@@ -363,6 +412,11 @@ border: 5px outset;
         padding: 10px 30px;
         font-size: 15px;
         cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    form button:hover{
+        background-color: #D1493D;
     }
 
 .zero{

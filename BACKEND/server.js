@@ -51,26 +51,22 @@ app.post('/cart', (req, res) => {
 })
 
 
-// app.post('/likes', (req, res) => {
-//     const likes = req.body.likes
-//     // console.log(typeof(req.body.carted[0]))
-//     // console.log(typeof(req.body.likes[0]))
-//     // console.log([likes.forEach(element => {
-//     //     db.select('*').from('img').where('imgid', element)
-//     // })])
-//     if (likes.length > 1){
-//         getImages(likes)
-//         .then(result => {res.json(result)})
-//     } else {
-//         db.select('*').from('img').where('imgid', likes[0]).then(result => {res.json(result)})
-//     }
-// })
+app.post('/likes', (req, res) => {
+    const likes = req.body.likes
+    if (likes.length > 1){
+        getImages(likes)
+        .then(result => {res.json(result)})
+    } else {
+        db.select('*').from('img').where('imgid', likes[0]).then(result => {res.json(result)})
+    }
+})
 
 function getImages(array){
-    return db.select('*').from('img').where('imgid', array[0]).union([array.forEach(element => {
-        return db.select('*').from('img').where('imgid', element)
-    })
-])}
+    let queryArray = array.map(element => 
+        {return db.select('*').from('img').where('imgid', element)})
+
+    return db.select('*').from('img').where('imgid', array[0]).union(queryArray)
+}
 
 
 app.post('/Product%20Closeup/Item.html', (req, res) => {
