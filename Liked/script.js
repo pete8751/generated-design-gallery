@@ -8,28 +8,18 @@ console.log(currData)
 
 //Loading Gallery
 let gallerycontainer = document.querySelector(".grid-wrapper");
+let container = document.querySelector(".items")
 
-
-{/* <div class="box zone">
-                <img src="../img/Gallery/Abstract 1.jpg" alt="" />
-                <div class="caption">
-                  <div class="details">
-                    <p class="title">Title</p>
-                    <p class="size">Size</p>
-                    <p class="price">Price</p>
-                  </div>
-                  <div class="interact">
-                    <i class="fa-regular fa-heart cap"></i>
-                    <i class="fa-solid fa-cart-shopping cap"></i>
-                  </div>
-                </div>
-              </div> */}
-
-
-
-fetch('http://localhost:3000/')
+if (currData.likes.length == 0){
+  container.textContent = "Go like some photos!"
+} else {
+  fetch('http://localhost:3000/likes', {method: "POST", headers: {
+    "Content-Type": "application/json"},
+    body: JSON.stringify(currData)})
     .then(response => response.json())
     .then(data => {displayImages(gallerycontainer, data)})
+  }
+
     // .then(console.log(imgtable))
     // .then(Displayimages(gallerycontainer, imgtable))
 
@@ -54,7 +44,7 @@ function displayImages(container, array) {
 
       imgContain.appendChild(img)
       newlisting.appendChild(imgContain)
-      displayCaption(element, newlisting)
+      // displayCaption(element, newlisting)
 
       container.appendChild(newlisting)
 });
@@ -145,183 +135,6 @@ function createInteract(element) {
     return interact
 }
 
-
-function togglepanel() {
-    wrapper.classList.toggle("panel-open");
-    console.log("TOGGLED")
-}
-
-//Filters
-let wrapper = document.querySelector(".wrapper");
-let panelbutton = document.querySelector(".filter-panel-toggle");
-
-//Price
-let minprice = document.querySelector(".price.range-min");
-let maxprice = document.querySelector(".price.range-max");
-let minpricetext = document.querySelector(".price.input-min");
-let maxpricetext = document.querySelector(".price.input-max");
-
-
-panelbutton.addEventListener("click", togglepanel)
-
-minprice.addEventListener("input", () => {
-    minpricetext.value = minprice.value
-    reloadGallery()
-})
-
-minpricetext.addEventListener("input", () =>{
-    minprice.value = minpricetext.value
-    reloadGallery()
-})
-
-maxprice.addEventListener("input", () =>{
-    maxpricetext.value = maxprice.value
-    reloadGallery()
-})
-
-maxpricetext.addEventListener("input", () =>{
-    maxprice.value = maxpricetext.value
-    reloadGallery()
-})
-
-//Width
-let minheight = document.querySelector(".height.range-min");
-let maxheight = document.querySelector(".height.range-max");
-let minheighttext = document.querySelector(".height.input-min");
-let maxheighttext = document.querySelector(".height.input-max");
-
-minheight.addEventListener("input", () => {
-    minheighttext.value = minheight.value
-    reloadGallery()
-})
-
-minheighttext.addEventListener("input", () =>{
-    minheight.value = minheighttext.value
-    reloadGallery()
-})
-
-maxheight.addEventListener("input", () =>{
-    maxheighttext.value = maxheight.value
-    reloadGallery()
-})
-
-maxheighttext.addEventListener("input", () =>{
-    maxheight.value = maxheighttext.value
-    reloadGallery()
-})
-
-//Height
-let minwidth = document.querySelector(".width.range-min");
-let maxwidth = document.querySelector(".width.range-max");
-let minwidthtext = document.querySelector(".width.input-min");
-let maxwidthtext = document.querySelector(".width.input-max");
-
-minwidth.addEventListener("input", () => {
-    minwidthtext.value = minwidth.value
-    reloadGallery()
-})
-
-minwidthtext.addEventListener("input", () =>{
-    minwidth.value = minwidthtext.value
-    reloadGallery()
-})
-
-maxwidth.addEventListener("input", () =>{
-    maxwidthtext.value = maxwidth.value
-    reloadGallery()
-})
-
-maxwidthtext.addEventListener("input", () =>{
-    maxwidth.value = maxwidthtext.value
-    reloadGallery()
-})
-
-//Styles
-let Styles = []
-let modern = document.getElementById("modern");
-let impressionism = document.getElementById("impressionism");
-let scenic = document.getElementById("scenic")
-let abstract = document.getElementById("abstract")
-
-
-modern.addEventListener('click', () =>{
-  addStyle(modern)
-  reloadGallery()
-  console.log(Styles)
-})
-
-impressionism.addEventListener('click', () =>{
-  addStyle(modern)
-  reloadGallery()
-})
-
-scenic.addEventListener('click', () =>{
-  addStyle(modern)
-  reloadGallery()
-})
-
-abstract.addEventListener('click', () =>{
-  addStyle(abstract)
-  reloadGallery()
-})
-
-
-function addStyle(input){
-  let style = input.value
-
-  if (Styles.includes(style)) {
-    const i = Styles.indexOf(style)
-    Styles.splice(i, 1)
-    input.checked = false
-  } else {
-    Styles.push(style)
-  }
-}
-
-//Search
-let searchValue = ""
-let searchBar = document.getElementById("search");
-
-searchBar.addEventListener('input', () => {
-    searchValue = searchBar.value
-    reloadGallery()
-  }
-)
-
-//Sort
-let sort = "none"
-let sorter = document.getElementById("sorting")
-
-sorter.onchange = () => {
-  sort = sorter.value
-  reloadGallery()
-}
-
-//Bundle
-let isBundle = false
-let bundler = document.getElementById("bundles")
-
-bundler.addEventListener('click', () => {
-  if (isBundle) {
-    isBundle = false
-  } else {
-    isBundle = true
-  }
-})
-
-//Reset Filters
-let reset = document.getElementById("reset");
-reset.addEventListener('click', () =>{
-  minheight.value = minheighttext.value = minwidth.value = minwidthtext.value = 0;
-  maxheight.value = maxheighttext.value = maxwidth.value = maxwidthtext.value = 100;
-  minprice.value = minpricetext.value = 0;
-  maxprice.value = maxpricetext.value = 100000;
-  Styles = []
-  isBundle = false
-  searchValue = ""
-  sorter.value = sort = "none"
-  reloadGallery()
-})
 
 //Connecting Filters and Database
 

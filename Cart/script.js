@@ -3,6 +3,7 @@ import {generateCookie, getCookie, getUserDataFromCookie, create_UUID, updateUse
 generateCookie("user", userObj)
 
 const cartInfo = getUserDataFromCookie("user");
+console.log(cartInfo)
 const carted = cartInfo.carted
 let currObj = []
 
@@ -13,13 +14,12 @@ if (carted.length == 0) {
     fetch('http://localhost:3000/cart', {method: "POST", headers: {
         "Content-Type": "application/json"}, body: JSON.stringify(cartInfo)})
         .then(response => response.json())
-        // .then(console.log)
         .then(object => {
-            currObj = object
+            // currObj = object
+            // console.log(currObj)
             displayCart(tbody, object)
+            fillValues()
         })
-        .then(() => fillValues())
-
 }
 
 //Displaying Cart

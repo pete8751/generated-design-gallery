@@ -358,6 +358,7 @@ function reloadGallery(){
 }
 
 function like(button) {
+  // const imgId = parseInt(button.id)
   const currData = getUserDataFromCookie("user")
   const liked = currData.likes
   if (liked.includes(button.id)) {

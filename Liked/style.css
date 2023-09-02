@@ -135,104 +135,95 @@ a {
     background-color:#902A47;
 }
 
-.cart{
-    padding-top: 50px;
+.items {
+    height: 90%;
+    background-color: darkslategray;
 }
 
-.cart-wrapper {
-    margin: auto 5%;
+.grid-wrapper {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    transition: 0.8s;
+    height: 100%;
 }
 
-.cart-body table{
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-    white-space: nowrap;
-}
-
-.cart-body table thead{
-    border: 1px solid black;
-    border-left: none;
-    border-right: none;
-}
-
-.cart-body table thead td{
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 13px;
-    padding: 18px, 0;
-}
-
-.cart-body table tbody tr td{
-    padding-top: 15px;
-}
-
-.cart-body table tbody td{
-    font-size: 13px;
-}
-
-.cart-body table img{
-    width: 70px
-}
-
-.cart-body table td:nth-child(1){
-    width: 100px;
-    text-align: center;
-}
-
-.cart-body table td:nth-child(2){
-    width: 150px;
-    text-align: center;
-}
-
-.cart-body table td:nth-child(3){
-    width: 250px;
-    text-align: center;
-}
-
-.cart-body table td:nth-child(4), .cart-body table td:nth-child(5), .cart-body table td:nth-child(6){
-    width: 150px;
-    text-align: center;
-}
-
-.cap{
-    cursor: pointer;
-}
-
-/* Transaction */
-
-.transaction{
-    display: flex;
-    justify-content: center;
-    gap: 10%;
-    padding: 10% 0 5%;
-}
 
 /*Images*/
 .box > img {
     width: 100%;
+    cursor: pointer;
+}
+
+.image-container > img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    object-fit: contain;
 }
 
 .box {
     background-color: #444;
-    padding: 130px;
+    /* padding: 130px; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-end; */
     margin: 20px;
+    /* cursor: pointer; */
+}
+
+.image-container{
+    width: 100%;
+    flex: 1;
+}
+
+/* Interact Panel */
+.caption {
+    background-color: #352126;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.details {
+    width: 70%;
+}
+
+.interact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.title, .size, .price{
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+.cap {
+font-size: 0.75em;
+}
+
+.like-btn, .cart-btn{
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
     cursor: pointer;
 }
 
-/* Checkout */
-.checkout-table{
-    padding-bottom: 20px;
+.cart-btn:hover{
+    color: greenyellow;
 }
 
-.checkout-table tr{
-    height: 30px;
-    padding-bottom: 10px;
+.like-btn:hover{
+    color: #902A47;
 }
 
-.checkout-table td{
-    /* height: 30px; */
-    padding: 0px 15px 0 0;
+.liked > .cap{
+    color: #902A47;
 }
 
 /* footer */

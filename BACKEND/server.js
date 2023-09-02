@@ -41,15 +41,37 @@ app.post('/', (req, res) => {
 
 app.post('/cart', (req, res) => {
     const cart = req.body.carted
+    console.log(typeof(cart[0]))
     if (cart.length > 1){
-        db.select('*').from('img').where('imgid', cart[0]).union([cart.forEach(element => {
-            return db.select('*').from('img').where('imgid', element)
-        })
-    ]).then(result => {res.json(result)})
+        getImages(cart)
+        .then(result => {res.json(result)})
     } else {
         db.select('*').from('img').where('imgid', cart[0]).then(result => {res.json(result)})
     }
 })
+
+
+// app.post('/likes', (req, res) => {
+//     const likes = req.body.likes
+//     // console.log(typeof(req.body.carted[0]))
+//     // console.log(typeof(req.body.likes[0]))
+//     // console.log([likes.forEach(element => {
+//     //     db.select('*').from('img').where('imgid', element)
+//     // })])
+//     if (likes.length > 1){
+//         getImages(likes)
+//         .then(result => {res.json(result)})
+//     } else {
+//         db.select('*').from('img').where('imgid', likes[0]).then(result => {res.json(result)})
+//     }
+// })
+
+function getImages(array){
+    return db.select('*').from('img').where('imgid', array[0]).union([array.forEach(element => {
+        return db.select('*').from('img').where('imgid', element)
+    })
+])}
+
 
 app.post('/Product%20Closeup/Item.html', (req, res) => {
     const imgid = req.body.imgid
@@ -59,7 +81,6 @@ app.post('/Product%20Closeup/Item.html', (req, res) => {
         if (result[0].isbundle) {
             db.select('*').from('img').where('bundleid', result[0].bundleid)
             .then(result1 => {res.json(result1)})
-        
         } else {
             res.json(result[0])
         }
@@ -83,7 +104,6 @@ app.listen(3000, () =>{
 
 
 async function dbFilter(Price, Height, Width, Style, isBundle, Search, sortBy) {
-    console.log(sortBy)
     if (sortBy == "none"){
         return db.select('*').from('img').where('price','>', Price[0]).andWhere('price','<', Price[1]).intersect([
             heightFilter(db, Height), widthFilter(db, Width), styleFilter(db, Style), bundleFilter(db, isBundle), dbSearch(db, Search)])
@@ -96,12 +116,9 @@ async function dbFilter(Price, Height, Width, Style, isBundle, Search, sortBy) {
 
 
 function sortValue(value) {
-    console.log(value == "highestprice")
     if (value == "highestprice"){
-        console.log("desc")
         return "desc"
     } else {
-        console.log("asc")
         return "asc"
     }
 }

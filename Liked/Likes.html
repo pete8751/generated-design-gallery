@@ -14,105 +14,33 @@
       <ul class="main-nav">
         <li><a href="../index.html">Home</a></li>
         <li><a href="../Listings/listings.html">Search</a></li>
-        <div class="push">
-          <li>
-            <a href="../Liked/Likes.html">
-              Liked <i class="fa-regular fa-heart"></i>
-            </a>
-          </li>
-          <li class="push">
-            <a href="./cart.html">
-              Cart <i class="fa-solid fa-bag-shopping"></i>
-            </a>
-          </li>
-        </div>
+      <div class="push">
+        <li>
+          <a href="./Likes.html"> Liked <i class="fa-regular fa-heart"></i></a>
+        </li>
+        <li class="push">
+          <a href="../Cart/cart.html"> Cart <i class="fa-solid fa-bag-shopping"></i></a>
+        </li>
+      </div>
       </ul>
     </nav>
 
     <div class="cover zone">
       <h1>Cart</h1>
-      <!-- <img class="cover" src="img/Main Banner Background.jpg" /> -->
     </div>
 
     <div class="wrapper">
-      <section class="cart">
-        <div class="cart-wrapper">
-          <div class="cart-body">
-            <table class="cart-table">
-              <thead>
-                <tr>
-                  <td>Remove</td>
-                  <td>Product</td>
-                  <td>Description</td>
-                  <td>Price</td>
-                  <td>Quantity</td>
-                </tr>
-              </thead>
-              <tbody class="inventory">
-                <tr class="item1">
-                  <td class="remove">RRR</td>
-                  <td class="image">III</td>
-                  <td class="price">PPP</td>
-                  <td class="quantity">QQQ</td>
-                </tr>
-                <tr class="item2">
-                  <td class="remove">RRR</td>
-                  <td class="image">III</td>
-                  <td class="price">PPP</td>
-                  <td class="quantity">QQQ</td>
-                </tr>
-                <tr class="item3">
-                  <td class="remove">RRR</td>
-                  <td class="image">III</td>
-                  <td class="price">PPP</td>
-                  <td class="quantity">QQQ</td>
-                </tr>
-              </tbody>
-            </table>
+      <section class="items">
+        <div class="zone grid-wrapper">
+          <head>
+            ITEMS ARE LOADED BY DATABASE, TEST ITEM:
+          </head>
+          <div class="box zone">
+            <img src="../img/Gallery/Abstract 1.jpg" alt="" />
           </div>
         </div>
       </section>
-
-      <section class="transaction">
-        <div class="coupon">
-          <h3>APPLY COUPON</h3>
-          <div>
-            <input class="code" type="text" placeholder="Enter Your Coupon" />
-            <button class="apply">Apply</button>
-          </div>
-        </div>
-
-        <div class="checkout">
-          <h3>Cart Total</h3>
-          <table class="checkout-table">
-            <tr class="sum">
-              <td>Cart Total</td>
-              <td id="sum">$XXX</td>
-            </tr>
-            <tr class="shipping">
-              <td>Shipping</td>
-              <td id="shipping">$XXX</td>
-            </tr>
-            <tr class="tax">
-              <td>Tax</td>
-              <td id="tax">$XXX</td>
-            </tr>
-            <tr class="total">
-              <td>Total</td>
-              <td id="total">$XXX</td>
-            </tr>
-            <tr class="discount">
-              <td>Coupon Discounts</td>
-              <td id="discount">$XXX</td>
-            </tr>
-            <tr class="final">
-              <td>Final Total</td>
-              <td id="final">$XXX</td>
-            </tr>
-          </table>
-          <button class="purchase">Purchase</button>
-        </div>
-      </section>
+    </section>
     </div>
 
     <footer class="zone three">
