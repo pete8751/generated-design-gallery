@@ -139,6 +139,7 @@ a {
 
 .cart{
     padding-top: 50px;
+    overflow-x: auto;
 }
 
 .cart-wrapper {
@@ -205,10 +206,64 @@ a {
 
 .transaction{
     display: flex;
-    justify-content: center;
-    gap: 10%;
-    padding: 10% 0 5%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* gap: 10%; */
+    padding: 10% 10% 5%;
 }
+
+.coupon{
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+.coupon h3, .checkout h3{
+    padding-bottom: 15px;
+}
+
+.coupon input{
+    padding: 10px 20px;
+    outline: none;
+    width: 60%;
+    margin-right: 10px;
+    border: 1px solid;
+}
+
+.coupon button, .checkout button{
+    background-color: black;
+    color: #f5f5f6;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.coupon button:hover, .checkout button:hover{
+    background-color: #f5f5f6;
+    color: black;
+    padding: 12px 20px;
+}
+
+.checkout{
+    width: 50%;
+    margin-bottom: 30px;
+    border: 1px solid;
+    padding: 30px;
+}
+
+.checkout table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.checkout table td{
+    border: 1px solid;
+    width: 50%;
+    padding: 10px;
+    font-size: 13px;    
+}
+
+
 
 /*Images*/
 .box > img {

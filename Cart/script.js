@@ -67,8 +67,8 @@ function enterData(row, element, i) {
 
     const quant = document.createElement("td")
     const pr2 = document.createElement("p")
-    const value2 = quantity[i]
-    pr2.textContent = value2
+    const input = addQuant(i)
+    pr2.textContent = input
     quant.appendChild(pr2)
 
     row.appendChild(remove);
@@ -81,6 +81,19 @@ function enterData(row, element, i) {
         removeItem(element)
         row.textContent = ""
     })
+}
+
+function addQuant(index){
+    let input = document.createElement("input")
+    input['type'] = "number"
+    input['value'] = quantity[index]
+    input['min'] = 1
+    input.addEventListener("input", () => {
+        quantity[i] = input.value
+        updateUserDataInCookie(currData)
+        fillValues()
+    })
+    return input
 }
 
 //Remove Button
@@ -141,12 +154,12 @@ function fillValues() {
 function getTotal(table){
     let total = 0
     for (var i = 0; i < table.rows.length; i++){
-        console.log(table.rows[i].cells[3].textContent)
-        total += parseFloat(table.rows[i].cells[3].textContent)
-        console.log(total)
+        // console.log(table.rows[i].cells[3].firstElementChild.value)
+        total += parseFloat(table.rows[i].cells[3].textContent) * quantity[i]
     }
     return total
 }
+
 
 // function calculateTotal(obj, quantities) {
 //     let total = 0;
