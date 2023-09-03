@@ -18,10 +18,10 @@ body {
 }
 
 .box:hover {
-    -webkit-tra-o-transform: scale(1.1);
-    -moz-tra-o-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-tra-o-transform: scale(1.05);
+    -moz-tra-o-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 

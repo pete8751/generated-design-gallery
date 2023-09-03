@@ -144,6 +144,8 @@ a {
 
 .cart-wrapper {
     margin: auto 5%;
+    max-height: 60em;
+    min-width: 1200px;
 }
 
 .cart-body table{
@@ -162,7 +164,7 @@ a {
 .cart-body table thead td{
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 1.5em;
     padding: 18px, 0;
 }
 
@@ -171,11 +173,11 @@ a {
 }
 
 .cart-body table tbody td{
-    font-size: 13px;
+    font-size: 2em;
 }
 
 .cart-body table img{
-    width: 70px
+    width: 200px
 }
 
 .cart-body table td:nth-child(1){
@@ -200,6 +202,7 @@ a {
 
 .cap{
     cursor: pointer;
+    font-size: 2em;
 }
 
 /* Transaction */

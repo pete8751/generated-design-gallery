@@ -27,7 +27,7 @@ body {
 
 .images{
     max-height: 50%;
-    max-width: 30%;
+    max-width: 25%;
     display: flex;
     flex-direction: column;
 }
@@ -38,13 +38,16 @@ body {
     transition: all 0.3s linear;
 }
 
-.box:hover {
-    -webkit-tra-o-transform: scale(1.1);
-    -moz-tra-o-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
+.box:hover, .bundle img:hover {
+    -webkit-tra-o-transform: scale(1.05);
+    -moz-tra-o-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
 }
 
+.images img{
+    transition: all ease 0.3s;
+}
 
 /*NAV*/
 
@@ -153,7 +156,6 @@ padding: 5% 5%;
     gap: 3rem;
 }
 
-
 .big-image {
     align-self: center;
 }
@@ -165,14 +167,16 @@ padding: 5% 5%;
 }
 
 .images img{
-flex-basis: 24%;
-width: 100%;
-height: 100%;
-border: 5px outset;
+    flex-basis: 24%;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+/* border: 5px outset; */
 }
 
 .description > *{
     padding-top: 50px;
+    font-weight: 100;
 }
 
 .description input {
@@ -214,6 +218,23 @@ border: 5px outset;
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
+h4{
+    font-weight: 400 !important;
+}
+
+#product-name{
+    font-weight: 400;
+}
+
+/* #product-price{
+    font-weight: 400;
+} */
+
+.url{
+padding: 40px 0 20px 0;
+}
+
 
 /*GRID*/
 .grid-wrapper {

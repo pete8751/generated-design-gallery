@@ -5,7 +5,6 @@ generateCookie("user", userObj)
 const cartInfo = getUserDataFromCookie("user");
 console.log(cartInfo)
 const carted = cartInfo.carted
-let currObj = []
 
 //Getting Data on Carted Items
 if (carted.length == 0) {
@@ -66,10 +65,8 @@ function enterData(row, element, i) {
     price.appendChild(pr1)
 
     const quant = document.createElement("td")
-    const pr2 = document.createElement("p")
     const input = addQuant(i)
-    pr2.textContent = input
-    quant.appendChild(pr2)
+    quant.appendChild(input)
 
     row.appendChild(remove);
     row.appendChild(image);
@@ -86,10 +83,12 @@ function enterData(row, element, i) {
 function addQuant(index){
     let input = document.createElement("input")
     input['type'] = "number"
-    input['value'] = quantity[index]
+    input.value = quantity[index]
     input['min'] = 1
+    // ToDo: add method to ensure that whenever user inputs value below min, it is automatically reset to previous value
     input.addEventListener("input", () => {
-        quantity[i] = input.value
+        let currData = getUserDataFromCookie("user")
+        quantity[index] = input.value
         updateUserDataInCookie(currData)
         fillValues()
     })

@@ -66,7 +66,7 @@ const name = document.getElementById("product-name")
 
 function updateDetails(object){
     name.textContent = object.img_name
-    pricetext.textContent = object.price
+    pricetext.textContent = "$" + object.price
     console.log(object)
 }
 

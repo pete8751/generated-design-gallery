@@ -139,11 +139,21 @@ a {
     border-radius: 5px 5px 5px 5px;
     outline: none;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
-.filter-panel-toggle:hover {
+#reset{
+    border-radius: 5px 5px 5px 5px;
+    color: #352126;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.filter-panel-toggle:hover, #reset:hover{
     background: #902A47;
+    color: white;
 }
 
 .filter-panel {
@@ -387,6 +397,12 @@ a {
     width: 70%;
 }
 
+.details > *{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
 .interact {
     display: flex;
     flex-direction: column;
@@ -394,9 +410,17 @@ a {
 }
 
 .title, .size, .price{
-    font-weight: 600;
     font-size: 1.4rem;
     line-height: 2rem;
+    margin-bottom: 10px;
+}
+
+/* .title{
+    margin-bottom: 10px;
+} */
+
+.size, .price{
+    font-weight: 100;
 }
 
 .cap {
@@ -444,10 +468,10 @@ font-size: 0.75em;
 } */
 
 .box:hover {
-    -webkit-tra-o-transform: scale(1.1);
-    -moz-tra-o-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-tra-o-transform: scale(1.05);
+    -moz-tra-o-transform: scale(1.05);  
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 /* footer */
