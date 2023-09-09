@@ -13,7 +13,7 @@ let container = document.querySelector(".items")
 if (currData.likes.length == 0){
   container.textContent = "Go like some photos!"
 } else {
-  fetch('https://onlinegenerateddesignserver.onrender.com/likes' || 'http://localhost:3000/likes', {method: "POST", headers: {
+  fetch('https://onlinegenerateddesignserver.onrender.com/likes', {method: "POST", headers: {
     "Content-Type": "application/json"},
     body: JSON.stringify(currData)})
     .then(response => response.json())
@@ -156,7 +156,7 @@ function reloadGallery(){
     console.log(filterObj)
     // console.log(filterObj)
 
-    fetch('https://onlinegenerateddesignserver.onrender.com/' || 'http://localhost:3000/', {method: "POST", headers: {
+    fetch('https://onlinegenerateddesignserver.onrender.com/', {method: "POST", headers: {
         "Content-Type": "application/json"},
         body: JSON.stringify(filterObj)
     })
