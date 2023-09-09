@@ -6,9 +6,9 @@ In this project I am mainly focusing on Backend, as I am working on gaining more
 
 I am also experimenting with cookies on this project, which remove the need to login to the page, as I store all important inputs in cookies.
 
-This is the link to the current version of the project that has been deployed:
+This is the link to the current version of the project that has been deployed: https://pete8751.github.io/generated-design-gallery/
 
-===================================================================================================================================================
+======================================================================================================================================================
 Currently: I am essentially done with the Backend part of this project, and have started working on the frontend. I have made the footers/headers
 of the project aesthetic, and have increased responsiveness. I am now working on making the body of each page look better, and adding some final functionality.
 
