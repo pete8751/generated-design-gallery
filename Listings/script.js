@@ -258,16 +258,19 @@ modern.addEventListener('click', () =>{
 impressionism.addEventListener('click', () =>{
   addStyle(impressionism)
   reloadGallery()
+  console.log(Styles)
 })
 
 scenic.addEventListener('click', () =>{
   addStyle(scenic)
   reloadGallery()
+  console.log(Styles)
 })
 
 abstract.addEventListener('click', () =>{
   addStyle(abstract)
   reloadGallery()
+  console.log(Styles)
 })
 
 
@@ -278,6 +281,7 @@ function addStyle(input){
     const i = Styles.indexOf(style)
     Styles.splice(i, 1)
     input.checked = false
+    // console.log(input.checked)
   } else {
     Styles.push(style)
   }
