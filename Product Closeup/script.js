@@ -8,7 +8,7 @@ const currId = obj.imgid
 console.log(currId)
 
 
-fetch('http://localhost:3000/Product%20Closeup/Item.html', {method: "POST", headers: {
+fetch('https://onlinegenerateddesignserver.onrender.com/Item.html' || 'http://localhost:3000/Item.html', {method: "POST", headers: {
     "Content-Type": "application/json"},
     body: JSON.stringify(obj)
 })

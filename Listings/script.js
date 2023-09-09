@@ -27,7 +27,7 @@ let gallerycontainer = document.querySelector(".grid-wrapper");
 
 
 
-fetch('http://localhost:3000/')
+fetch('https://onlinegenerateddesignserver.onrender.com/' || 'http://localhost:3000/')
     .then(response => response.json())
     .then(data => {displayImages(gallerycontainer, data)})
     // .then(console.log(imgtable))
@@ -348,7 +348,7 @@ function reloadGallery(){
     console.log(filterObj)
     // console.log(filterObj)
 
-    fetch('http://localhost:3000/', {method: "POST", headers: {
+    fetch('https://onlinegenerateddesignserver.onrender.com/' || 'http://localhost:3000/', {method: "POST", headers: {
         "Content-Type": "application/json"},
         body: JSON.stringify(filterObj)
     })
