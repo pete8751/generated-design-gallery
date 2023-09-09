@@ -1,10 +1,11 @@
 "generated-design-gallery"
 
-This project is an art gallery website of AI generated art. It is fullstack, and hence I have created the database and server.
-I have deployed this project with the help of render to host my database and server, and am hosting the frontend using github pages.
+This project is an art gallery website of AI generated art. It is fullstack, and hence I have created the database and server,
+which I am hosting on render. The frontend is hosted on github pages.
 In this project I am mainly focusing on Backend, as I am working on gaining more expertise in creating RESTful APIs, and optimizing databases.
 
-I am also experimenting with cookies on this project, which remove the need to login to the page, as I store all important inputs in cookies.
+I am also experimenting with cookies on this project, which remove the need to login to the page, and create unnecessary communication with the database.
+I may add a login feature down the line, however I am currently more interested in working with cookies.
 
 This is the link to the current version of the project that has been deployed: https://pete8751.github.io/generated-design-gallery/
 
