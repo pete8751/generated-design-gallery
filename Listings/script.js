@@ -309,9 +309,11 @@ let bundler = document.getElementById("bundles")
 bundler.addEventListener('click', () => {
   if (isBundle) {
     isBundle = false
+    bundler.checked = false
   } else {
     isBundle = true
   }
+  reloadGallery()
 })
 
 //Reset Filters

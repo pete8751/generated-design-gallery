@@ -18,9 +18,11 @@ fetch('https://onlinegenerateddesignserver.onrender.com/Item.html', {method: "PO
 
 const bigContainer = document.getElementById("big")
 const bundlebtn = document.querySelector(".bundle-btn")
+const bundle = document.querySelector(".bundle")
 
 function productDisplay(response) {
     console.log(response.length)
+    bundle.textContent = ""
     if (response.length > 1) {
         initializeBundleBtn(response)
 
@@ -31,19 +33,24 @@ function productDisplay(response) {
                 bigContainer['src'] = object.url
                 updateDetails(object)
             } else {
-                let small = document.getElementById(`${i}`)
-                console.log(small)
+                // let small = document.getElementById(`${i}`)
+                let smallcontainer = document.createElement('div');
+                smallcontainer.classList.add('small')
+                let small = document.createElement('img')
+                // console.log(small)
                 small['src'] = object.url
+
                 let swapBig1 = (element) => swapBig(element, object)
                 small.addEventListener('click', () => swapBig1(small))
+
+                smallcontainer.appendChild(small)
+                bundle.appendChild(smallcontainer)
             }
             i++
         });
     } else {
         bigContainer['src'] = response.url
         bundlebtn.classList.toggle("hide")
-        const bundle = document.querySelector(".bundle")
-        bundle.textContent = ""
         updateDetails(response)
     }
 }
