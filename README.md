@@ -20,8 +20,9 @@ Currently: I am essentially done with the Backend part of this project, and have
 of the project aesthetic, and have increased responsiveness. I am now working on making the body of each page look better, and adding some final functionality.
 
 TODO: 
-1. Style the body of each page.
+1. Style the body of each page (Make Filter Panel static and scrollable, improve default Like page state, etc).
 2. Make website fully responsive.
-3. Initiate a download when user purchases in the cart.
-4. Add a Success page, as well as an About page.
+3. Improve load visuals (Make pages look better while data is loading in).
+4. Initiate a download when user purchases in the cart.
+5. Add a Success page, as well as an About page.
 
