@@ -256,12 +256,12 @@ modern.addEventListener('click', () =>{
 })
 
 impressionism.addEventListener('click', () =>{
-  addStyle(modern)
+  addStyle(impressionism)
   reloadGallery()
 })
 
 scenic.addEventListener('click', () =>{
-  addStyle(modern)
+  addStyle(scenic)
   reloadGallery()
 })
 
