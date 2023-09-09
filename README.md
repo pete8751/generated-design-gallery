@@ -10,8 +10,8 @@ To see the server files for this project, go to the backend version of this repo
 I am also experimenting with cookies on this project, which remove the need to login to the page, hence avoiding unnecessary communication with the backend.
 I may add a login feature down the line, however I am currently more interested in working with cookies.
 
-Please note that since the Backend is hosted on a free hosting service (Render), there is a windup time of around 7-8 seconds, after which the website
-will begin communicating with the server and database at normal speeds.
+Please note that since the Backend is hosted on a free hosting service (Render), there is a windup time of up to 30 seconds, after which the website
+will begin communicating with the server and database at normal speeds. (This may be evident at first in the search section of the website)
 
 ======================================================================================================================================================
 
