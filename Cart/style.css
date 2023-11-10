@@ -448,7 +448,7 @@ form button {
     transition: all 0.3s ease;
 }
 form button:hover {
-    background: #902A47;
+    background: #D1493D;
     color: white;
 }
 

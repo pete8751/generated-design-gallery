@@ -147,7 +147,7 @@ a {
 }
 
 #reset:hover {
-    background: #902A47;
+    background: #D1493D;
     color: white;
 }
 
@@ -246,16 +246,17 @@ a {
 
 .range-input input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none !important;
-    width: 30px;
-    height:30px;
-    background: black;
+    width: 25px;
+    height:25px;
+    background: white;
     border: 2px solid black;
     border-radius: 50%;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .range-input input[type="range"]::-webkit-slider-thumb:hover {
-    background: black;
+    background: #D1493D;
 } 
    
 
@@ -275,16 +276,23 @@ a {
     text-align: center;
 }
 
-.modern-container, .impressionism-container, .scenic-container, .abstract-container{
+.style-options > div{
     display: flex;
     justify-content: center;
     padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+
+.style-filter label{
+    margin-left: 10px;
 }
 
 .bundle{
     display: flex;
     justify-content: center;
-    padding-top: 10px;
+    padding-top: 20px;
+    gap: 15px;
 }
 
 /* Filter Options */
@@ -335,7 +343,7 @@ a {
 }
 
 .filter-toggle button:hover {
-    background: #902A47;
+    background: #D1493D;
     color: white;
 }
 
@@ -694,7 +702,7 @@ font-size: 0.75em;
     }
 
     form button:hover {
-        background: #902A47;
+        background: #D1493D;
         color: white;
     }
     
