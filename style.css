@@ -80,6 +80,12 @@ a {
     text-decoration: none;
 }
 
+.activated a{
+    color: #D1493D !important;
+    padding: 20px 60px !important;
+}
+
+
 .push {
     display: flex;
     margin-left: auto;
@@ -439,6 +445,11 @@ form button {
     padding: 10px 30px;
     font-size: 15px;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+form button:hover {
+    background: #902A47;
+    color: white;
 }
 
 

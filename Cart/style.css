@@ -94,10 +94,6 @@ body {
     padding: 20px 60px !important;
 }
 
-.main-nav > .active{
-    background-color: #352126;
-}
-
 
 a {
     color: #f5f5f6;
@@ -449,6 +445,11 @@ form button {
     padding: 10px 30px;
     font-size: 15px;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+form button:hover {
+    background: #902A47;
+    color: white;
 }
 
 

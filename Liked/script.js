@@ -8,10 +8,12 @@ console.log(currData)
 
 //Loading Gallery
 let gallerycontainer = document.querySelector(".grid-wrapper");
-let container = document.querySelector(".items")
+let container = document.querySelector(".items");
+let emptyText = document.querySelector(".empty-text");
+emptyText.classList.add("hidden")
 
 if (currData.likes.length == 0){
-  container.textContent = "Go like some photos!"
+  emptyText.classList.remove("hidden")
 } else {
   fetch('https://onlinegenerateddesignserver.onrender.com/likes', {method: "POST", headers: {
     "Content-Type": "application/json"},
@@ -20,14 +22,10 @@ if (currData.likes.length == 0){
     .then(data => {displayImages(gallerycontainer, data)})
   }
 
-    // .then(console.log(imgtable))
-    // .then(Displayimages(gallerycontainer, imgtable))
 
-
-// const len = imgtable.length;
+  
 
 function displayImages(container, array) {
-    container.textContent = '';
 
     array.forEach(element => {
       console.log(element.img_name)
@@ -44,7 +42,6 @@ function displayImages(container, array) {
 
       imgContain.appendChild(img)
       newlisting.appendChild(imgContain)
-      // displayCaption(element, newlisting)
 
       container.appendChild(newlisting)
 });
