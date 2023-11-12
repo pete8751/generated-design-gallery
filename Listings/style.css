@@ -11,10 +11,29 @@ body {
 }
 
 /*NAV*/
-
-.nav-container{
-    background: #902A47;
+.zone {
+    color:#FFF;
     font-size:2em;
+    transition: all 0.3s linear;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.newsletter{
+    border-top: 1px solid #D1493D;
+    border-bottom: 1px solid #D1493D;
+}
+
+.box:hover {
+    -webkit-tra-o-transform: scale(1.05);
+    -moz-tra-o-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+}
+/* #902A47; */
+.nav-container{
+    background: #352126;
+    font-size: 2em;
+    border-bottom: 1px solid #D1493D;
 }
 
 .sticky{
@@ -139,16 +158,18 @@ a {
 
 #reset{
     border-radius: 5px;
-    color: #352126;
+    color: black;
     border: none;
     outline: none;
     cursor: pointer;
     transition: 0.5s ease;
+    font-size: 1rem;
 }
 
 #reset:hover {
     background: #D1493D;
     color: white;
+    border: 2px solid white;
 }
 
 
@@ -165,7 +186,7 @@ a {
     background: #902A47;
     color: white;
 } */
-
+/* #444; */
 .filter-panel {
     display: none;
     box-sizing: border-box;
@@ -176,10 +197,11 @@ a {
     /* z-index: 1; */
     padding: 20px 35px;
     color: #D1493D;
-    background: #444;
+    background: #352126;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
     transition: 0.5s;
     /* padding: 4.8rem 2.4rem 1.6rem; */
+    border-right: solid 2px #D1493D;
 }
 
 /* Filters */
@@ -187,6 +209,7 @@ a {
     background-color: #352126;
     min-height: 70px;
     position: relative;
+    border-bottom: 2px solid #D1493D;
 }
 
 .search-sort-container{
@@ -218,7 +241,12 @@ a {
     width: 100%;
     box-sizing: border-box;
 }
-
+.inputs{
+    color: white;
+}
+label{
+    color: white;
+}
 
 .range-input {
     padding: 20px 0;
@@ -338,13 +366,14 @@ a {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1rem;
     transition: all 0.5s ease;
 }
 
 .filter-toggle button:hover {
     background: #D1493D;
     color: white;
+    border: solid 2px white;
 }
 
 
@@ -404,7 +433,7 @@ a {
 /*GRID*/
 .items {
     height: 90%;
-    background-color: darkslategray;
+    background-color: #902A47;
 }
 
 .grid-wrapper {
@@ -437,6 +466,7 @@ a {
     /* justify-content: flex-end; */
     margin: 20px;
     /* cursor: pointer; */
+    border: 2px solid #D1493D;
 }
 
 .image-container{
@@ -542,6 +572,7 @@ font-size: 0.75em;
     -moz-tra-o-transform: scale(1.05);  
     -o-transform: scale(1.05);
     transform: scale(1.05);
+    border: 2px solid white;
 }
 
 /* footer */

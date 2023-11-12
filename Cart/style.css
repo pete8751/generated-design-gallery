@@ -12,36 +12,29 @@ body {
 
 
 .zone {
-    /* padding:30px 50px;
-    margin:40px 60px; */
-    /* cursor:pointer; */
-    /* display:inline-block; */
     color:#FFF;
     font-size:2em;
-    /* border-radius:4px;
-    border:1px solid #bbb; */
     transition: all 0.3s linear;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
-
-/* .zone:hover {
-    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
-    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
-    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
-    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
-} */
+.newsletter{
+    border-top: 1px solid #D1493D;
+    border-bottom: 1px solid #D1493D;
+}
 
 .box:hover {
-    -webkit-tra-o-transform: rotate(-7deg);
-    -moz-tra-o-transform: rotate(-7deg);
-    -o-transform: rotate(-7deg);
-    transform: rotate(-7deg);
+    -webkit-tra-o-transform: scale(1.05);
+    -moz-tra-o-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
 }
-
-/*NAV*/
-
+/* NAV */
+/* #902A47; */
 .nav-container{
-    background: #902A47;
-    font-size:2em;
+    background: #352126;
+    font-size: 2em;
+    border-bottom: 1px solid #D1493D;
 }
 
 .sticky{
@@ -128,15 +121,43 @@ a {
     background-size: cover;
 }
 
+.spacer{
+    height: 50px;
+    border: none;
+}
 /* Cart */
 .wrapper{
-    background-color:#902A47;
+    background-color:#352126;
+    color: white
 }
 
 .cart{
     padding-top: 50px;
     overflow-x: auto;
+    border-top: 1px solid #D1493D;
 }
+
+.cart::-webkit-scrollbar {
+    width: 5px;               /* width of the entire scrollbar */
+    transition: all 0.5s ease;
+  }
+  
+  .cart::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+    transition: all 0.5s ease;
+  }
+  
+  .cart::-webkit-scrollbar-thumb {
+    background-color: #444;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 1px solid #D1493D;  /* creates padding around scroll thumb */;
+    transition: all 0.5s ease;
+  }
+
+  .cart::-webkit-scrollbar-thumb:hover {
+    background-color: #D1493D;    /* color of the scroll thumb */
+    border: 1px solid white;
+  }
 
 .cart-wrapper {
     margin: auto 5%;
@@ -152,7 +173,7 @@ a {
 }
 
 .cart-body table thead{
-    border: 1px solid black;
+    border: 1px solid #D1493D;
     border-left: none;
     border-right: none;
 }
@@ -199,6 +220,11 @@ a {
 .cap{
     cursor: pointer;
     font-size: 2em;
+    border: solid 2px black;
+}
+.cap:hover{
+    color: #D1493D;
+    /* border: solid 2px #D1493D; */
 }
 
 /* Transaction */
@@ -207,6 +233,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    border-top: 1px solid #D1493D;
     /* gap: 10%; */
     padding: 10% 10% 5%;
 }

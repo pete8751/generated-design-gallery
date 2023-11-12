@@ -15,6 +15,12 @@ body {
     color:#FFF;
     font-size:2em;
     transition: all 0.3s linear;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.newsletter{
+    border-top: 1px solid #D1493D;
+    border-bottom: 1px solid #D1493D;
 }
 
 .box:hover {
@@ -26,8 +32,9 @@ body {
 
 
 .nav-container{
-    background: #902A47;
+    background: #352126;
     font-size: 2em;
+    border-bottom: 1px solid black;
 }
 
 .sticky{
@@ -166,12 +173,10 @@ a {
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
-
 .slideshow-container img{
     width: 100%;
     transition: all 0.6s ease;
 }
-
 .slideshow-container img:hover{
     transform: scale(1.1);
 }
@@ -181,7 +186,9 @@ a {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
+.mySlides img{
+    border: 1px solid #D1493D;
+}
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
@@ -241,12 +248,10 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border-bottom: solid 10px #717171;
-    border-width: 10%; */
 }
 
 .users-liked{
-    background-color: #444;
+    background-color: #350813;
 }
 
 
@@ -265,19 +270,26 @@ a {
 }
 
 .grid-wrapper::-webkit-scrollbar {
-    width: 4px;               /* width of the entire scrollbar */
+    width: 5px;               /* width of the entire scrollbar */
+    transition: all 0.5s ease;
   }
   
   .grid-wrapper::-webkit-scrollbar-track {
     background: transparent;        /* color of the tracking area */
+    transition: all 0.5s ease;
   }
   
   .grid-wrapper::-webkit-scrollbar-thumb {
-    background-color: orange;    /* color of the scroll thumb */
+    background-color: #444;    /* color of the scroll thumb */
     border-radius: 20px;       /* roundness of the scroll thumb */
-    border: 1px solid orange;  /* creates padding around scroll thumb */
+    border: 1px solid #D1493D;  /* creates padding around scroll thumb */;
+    transition: all 0.5s ease;
   }
 
+  .grid-wrapper::-webkit-scrollbar-thumb:hover {
+    background-color: #D1493D;    /* color of the scroll thumb */
+    border: 1px solid white;
+  }
 /*Images*/
 .box > img {
     width: 100%;
@@ -291,7 +303,7 @@ a {
     /* padding: 130px; */
     margin: 20px;
     cursor: pointer;
-    border: 10px outset;
+    border: 1px solid #D1493D;
 }
 
 
@@ -420,14 +432,15 @@ ul{
     display: flex;
 
 }
-
 .newsletter-form {
     display: flex;
-    gap: 0.8rem;
+    gap: 1.5rem;
     padding: 1.6rem;
+    align-items: center;
 }
 
 .newsletter-input {
+    display: flex;
     align-items: center;
 }
 
@@ -441,11 +454,12 @@ form input {
 }
 form button {
     border: 2px solid;
-    border-radius: 30px;
+    border-radius: 10px;
     padding: 10px 30px;
     font-size: 15px;
     cursor: pointer;
     transition: all 0.3s ease;
+    height: 95%;
 }
 form button:hover {
     background: #D1493D;
