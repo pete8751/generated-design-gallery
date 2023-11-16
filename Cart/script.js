@@ -131,7 +131,7 @@ function fillValues() {
     const sum = getTotal(tbody);
     console.log(sum)
     const ship = 10;
-    const taxAmount = sum * 0.15
+    const taxAmount = sum * 0.15;
     const totalValue = sum + ship + taxAmount
     let disc = 0
 
@@ -142,12 +142,12 @@ function fillValues() {
 
     const finalValue = sum + ship + taxAmount - disc;
 
-    total.textContent = `$${sum}`;
-    shipping.textContent = `$${ship}`;;
-    tax.textContent = `$${taxAmount}`;
-    discount.textContent = `$${disc}`;
-    total1.textContent = `$${totalValue}`;
-    final.textContent = `$${finalValue}`;
+    total.textContent = `$${sum.toFixed(2)}`;
+    shipping.textContent = `$${ship.toFixed(2)}`;;
+    tax.textContent = `$${taxAmount.toFixed(2)}`;
+    discount.textContent = `$${disc.toFixed(2)}`;
+    total1.textContent = `$${totalValue.toFixed(2)}`;
+    final.textContent = `$${finalValue.toFixed(2)}`;
 }
 
 function getTotal(table){
