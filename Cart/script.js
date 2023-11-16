@@ -76,7 +76,6 @@ function enterData(row, element, i) {
 
     icon.addEventListener('click', () => {
         removeItem(element)
-        row.textContent = ""
     })
 }
 
@@ -87,9 +86,9 @@ function addQuant(index){
     input['min'] = 1
     // ToDo: add method to ensure that whenever user inputs value below min, it is automatically reset to previous value
     input.addEventListener("input", () => {
-        let currData = getUserDataFromCookie("user")
-        quantity[index] = input.value
-        updateUserDataInCookie(currData)
+        let currData = getUserDataFromCookie("user");
+        quantity[index] = input.value;
+        updateUserDataInCookie(currData);
         fillValues()
     })
     return input
@@ -97,14 +96,15 @@ function addQuant(index){
 
 //Remove Button
 function removeItem(object){
-    let currData = getUserDataFromCookie("user")
-    let userCart = currData.carted
-    let amount = currData.quantity
-    let i = userCart.indexOf(object.img_id)
-    userCart.splice(i, 1)
-    amount.splice(i, 1)
-    updateUserDataInCookie("user", currData)
-    fillValues()
+    let currData = getUserDataFromCookie("user");
+    let userCart = currData.carted;
+    let amount = currData.quantity;
+    let i = userCart.indexOf(object.img_id);
+    userCart.splice(i, 1);
+    amount.splice(i, 1);
+    updateUserDataInCookie("user", currData);
+    tbody.deleteRow(i);
+    fillValues();
 }
 
 //Discount
@@ -152,6 +152,7 @@ function fillValues() {
 
 function getTotal(table){
     let total = 0
+    console.log(table.rows.length);
     for (var i = 0; i < table.rows.length; i++){
         // console.log(table.rows[i].cells[3].firstElementChild.value)
         total += parseFloat(table.rows[i].cells[3].textContent) * quantity[i]

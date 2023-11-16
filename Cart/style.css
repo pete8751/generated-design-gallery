@@ -137,6 +137,7 @@ a {
     overflow-x: auto;
     margin-left: 5%;
     margin-right: 5%;
+    min-height: 200px;
 }
 
 .cart::-webkit-scrollbar {
