@@ -128,13 +128,15 @@ a {
 /* Cart */
 .wrapper{
     background-color:#352126;
-    color: white
+    color: white;
+    border-top: 1px solid #D1493D;
 }
 
 .cart{
     padding-top: 50px;
     overflow-x: auto;
-    border-top: 1px solid #D1493D;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .cart::-webkit-scrollbar {
