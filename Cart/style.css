@@ -221,11 +221,24 @@ a {
     cursor: pointer;
     font-size: 2em;
     border: solid 2px black;
+    transition: all 0.3s ease;
 }
 .cap:hover{
     color: #D1493D;
     /* border: solid 2px #D1493D; */
 }
+
+input[type="number"] {
+    width: 50px;
+    height: 30px;
+    padding: 5px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
 
 /* Transaction */
 

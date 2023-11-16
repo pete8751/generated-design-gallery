@@ -8,7 +8,10 @@ console.log(currData)
 
 //Loading Gallery
 let gallerycontainer = document.querySelector(".grid-wrapper");
-
+let emptyText = document.querySelector(".empty-text");
+let noItems = document.querySelector(".no-items")
+emptyText.classList.remove("hidden")
+noItems.classList.add("hidden")
 
 {/* <div class="box zone">
                 <img src="../img/Gallery/Abstract 1.jpg" alt="" />
@@ -37,6 +40,14 @@ fetch('https://onlinegenerateddesignserver.onrender.com/')
 // const len = imgtable.length;
 
 function displayImages(container, array) {
+  
+    if (array.length == 0){
+      noItems.classList.remove("hidden");
+    } else {
+      noItems.classList.add("hidden");
+    }
+
+    emptyText.classList.add("hidden");
     container.textContent = '';
 
     array.forEach(element => {

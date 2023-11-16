@@ -436,6 +436,33 @@ label{
     background-color: #902A47;
 }
 
+/* Empty-Text */
+.empty-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    font-size: 2rem;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.no-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    font-size: 2rem;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.hidden {
+    display: none !important;  
+}
+
 .grid-wrapper {
     display: grid;
     gap: 20px;
