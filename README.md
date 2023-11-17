@@ -18,6 +18,7 @@ Please note that since the Backend is hosted on a free hosting service (Render),
 will begin communicating with the server and database at normal speeds. (This may be evident at first in the search section of the website)
 
 ===========================================================================
+
 Languages: 
 - Javascript
 - SQL
