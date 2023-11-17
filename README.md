@@ -17,7 +17,17 @@ I may add a login feature down the line, however I am currently more interested 
 Please note that since the Backend is hosted on a free hosting service (Render), there is a windup time of up to 30 seconds, after which the website
 will begin communicating with the server and database at normal speeds. (This may be evident at first in the search section of the website)
 
-======================================================================================================================================================
+===========================================================================
+Languages: 
+- Javascript
+- SQL
+- HTML
+- CSS
+
+Tools:
+- PostgreSQL
+- Render
+===========================================================================
 
 
 Currently: I am essentially done with the Backend part of this project, and have started working on the frontend. I have made the footers/headers
