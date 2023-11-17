@@ -7,6 +7,8 @@ It is fullstack, and hence I have created the database (Postgresql) and server, 
 In this project I am mainly focusing on Backend, as I am working on gaining more expertise in creating RESTful APIs, and optimizing databases.
 To see the server files for this project, go to the backend version of this repo.
 
+Server Files: https://github.com/pete8751/generated-design-gallery-BACKEND
+
 I am also experimenting with cookies on this project, which remove the need to login to the page, hence avoiding unnecessary communication with the backend.
 I may add a login feature down the line, however I am currently more interested in working with cookies.
 
