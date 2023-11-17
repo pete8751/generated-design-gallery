@@ -62,6 +62,7 @@ function displayImages(container, array) {
       const url = element.url
       const img = document.createElement("img")
       img['src'] = url
+      img['loading'] = "lazy";
 
       imgContain.appendChild(img)
       newlisting.appendChild(imgContain)
