@@ -15,7 +15,7 @@ emptyText.classList.add("hidden")
 if (currData.likes.length == 0){
   emptyText.classList.remove("hidden")
 } else {
-  fetch('https://onlinegenerateddesignserver.onrender.com/likes', {method: "POST", headers: {
+  fetch('https://generateddesignserver-8c11c23883ae.herokuapp.com/likes', {method: "POST", headers: {
     "Content-Type": "application/json"},
     body: JSON.stringify(currData)})
     .then(response => response.json())
@@ -153,7 +153,7 @@ function reloadGallery(){
     console.log(filterObj)
     // console.log(filterObj)
 
-    fetch('https://onlinegenerateddesignserver.onrender.com/', {method: "POST", headers: {
+    fetch('https://generateddesignserver-8c11c23883ae.herokuapp.com/', {method: "POST", headers: {
         "Content-Type": "application/json"},
         body: JSON.stringify(filterObj)
     })

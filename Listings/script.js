@@ -30,7 +30,7 @@ noItems.classList.add("hidden")
 
 
 
-fetch('https://onlinegenerateddesignserver.onrender.com/')
+fetch('https://generateddesignserver-8c11c23883ae.herokuapp.com/')
     .then(response => response.json())
     .then(data => {displayImages(gallerycontainer, data)})
     // .then(console.log(imgtable))
@@ -366,7 +366,7 @@ function reloadGallery(){
     console.log(filterObj)
     // console.log(filterObj)
 
-    fetch('https://onlinegenerateddesignserver.onrender.com/', {method: "POST", headers: {
+    fetch('https://generateddesignserver-8c11c23883ae.herokuapp.com/', {method: "POST", headers: {
         "Content-Type": "application/json"},
         body: JSON.stringify(filterObj)
     })

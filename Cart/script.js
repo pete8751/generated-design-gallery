@@ -10,7 +10,7 @@ const carted = cartInfo.carted
 if (carted.length == 0) {
     console.log("you have no items in your cart")
 } else {
-    fetch('https://onlinegenerateddesignserver.onrender.com/cart', {method: "POST", headers: {
+    fetch('https://generateddesignserver-8c11c23883ae.herokuapp.com/cart', {method: "POST", headers: {
         "Content-Type": "application/json"}, body: JSON.stringify(cartInfo)})
         .then(response => response.json())
         .then(object => {
