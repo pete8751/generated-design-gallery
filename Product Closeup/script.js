@@ -8,7 +8,7 @@ const currId = obj.imgid
 console.log(currId)
 
 
-fetch('https://generateddesignserver-8c11c23883ae.herokuapp.com/item', {method: "POST", headers: {
+fetch('https://generateddesignserver-8c11c23883ae.herokuapp.com/item', {method: "POST", mode: 'cors', headers: {
     "Content-Type": "application/json"},
     body: JSON.stringify(obj)
 })
