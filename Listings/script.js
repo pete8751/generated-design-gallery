@@ -30,7 +30,7 @@ noItems.classList.add("hidden")
 
 
 
-fetch('https://generateddesignserver-8c11c23883ae.herokuapp.com/', {mode: 'cors'})
+fetch('https://generateddesignserver-8c11c23883ae.herokuapp.com/')
     .then(response => response.json())
     .then(data => {displayImages(gallerycontainer, data)})
     // .then(console.log(imgtable))
@@ -40,6 +40,7 @@ fetch('https://generateddesignserver-8c11c23883ae.herokuapp.com/', {mode: 'cors'
 // const len = imgtable.length;
 
 function displayImages(container, array) {
+    console.log(array);
   
     if (array.length == 0){
       noItems.classList.remove("hidden");
